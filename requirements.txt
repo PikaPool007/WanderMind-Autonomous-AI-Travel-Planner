@@ -1,0 +1,12 @@
+streamlit
+langchain-openai
+python-dotenv
+langgraph
+amadeus
+langchain_chroma
+ipython
+serpapi
+google-search-results
+reportlab
+markdown2
+bs4
