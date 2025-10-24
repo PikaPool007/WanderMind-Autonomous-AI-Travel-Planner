@@ -75,33 +75,33 @@ class DisplayResultStreamlit:
         with st.chat_message("user"):
             st.write(user_message)
             logger.debug(f"User message displayed: {user_message}")
+        with st.spinner("⌛Creating your itinerary..."):
+            try:
+                for event in graph.stream({"user_data": user_message}):
+                    for key, value in event.items():
+                        if not value:
+                            continue
 
-        try:
-            for event in graph.stream({"user_data": user_message}):
-                for key, value in event.items():
-                    if not value:
-                        continue
+                        if isinstance(value, dict) and "final_itinerary" in value:
+                            itinerary = value["final_itinerary"]
+                            with st.chat_message("assistant"):
+                                st.markdown("### ✈️ Final Itinerary")
+                                st.write(itinerary)
 
-                    if isinstance(value, dict) and "final_itinerary" in value:
-                        itinerary = value["final_itinerary"]
-                        with st.chat_message("assistant"):
-                            st.markdown("### ✈️ Final Itinerary")
-                            st.write(itinerary)
+                                # ✅ Generate and show PDF download button
+                                pdf_data = self.generate_pdf(itinerary)
+                                st.download_button(
+                                    label="📄 Download Itinerary as PDF",
+                                    data=pdf_data,
+                                    file_name="travel_itinerary.pdf",
+                                    mime="application/pdf"
+                                )
+                            logger.info("Final itinerary displayed and PDF download enabled")
 
-                            # ✅ Generate and show PDF download button
-                            pdf_data = self.generate_pdf(itinerary)
-                            st.download_button(
-                                label="📄 Download Itinerary as PDF",
-                                data=pdf_data,
-                                file_name="travel_itinerary.pdf",
-                                mime="application/pdf"
-                            )
-                        logger.info("Final itinerary displayed and PDF download enabled")
+                        elif hasattr(value, "content"):
+                            with st.chat_message("assistant"):
+                                st.write(value.content)
+                            logger.debug("Assistant message displayed in stream")
 
-                    elif hasattr(value, "content"):
-                        with st.chat_message("assistant"):
-                            st.write(value.content)
-                        logger.debug("Assistant message displayed in stream")
-
-        except Exception as e:
-            logger.error(f"❌ Error during UI streaming or rendering: {e}", exc_info=True)
+            except Exception as e:
+                logger.error(f"❌ Error during UI streaming or rendering: {e}", exc_info=True)
