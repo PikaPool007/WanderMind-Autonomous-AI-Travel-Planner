@@ -123,10 +123,17 @@ Refer to `requirements.txt` for full dependency details.
 
 ## 🏁 Future Enhancements
 
-- Integrate **multi-city itinerary generation**  
-- Add **cost estimation and optimization** features  
-- Support **map visualization** using Folium or Google Maps API  
-- Deploy as a **cloud-based agent** on Azure/AWS  
+- **Voice-Based Trip Requests:**  
+  Enable speech-to-text functionality so users can verbally describe their travel plans instead of typing, making the experience more natural and hands-free.
+
+- **Real-Time Availability Checks:**  
+  Integrate live APIs to instantly verify flight and hotel availability, ensuring all itinerary options are accurate and up to date before confirmation.
+
+- **Interactive Map Visualization:**  
+  Embed dynamic maps within the UI to visualize hotels, attractions, and travel routes, providing users with better spatial awareness and trip context.
+
+- **Collaborative Trip Mode:**  
+  Introduce a shared planning mode where multiple users can co-create an itinerary, merge preferences, and finalize trip details together.  
 
 ---
 
