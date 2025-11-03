@@ -12,7 +12,7 @@ class FlightTools:
             logger.exception(f"❌ Failed to initialize Amadeus client: {e}")
             self.amadeus = None
 
-    def get_airport_code(self, city_name: str) -> str:
+    def fetch_airport_code(self, city_name: str) -> str:
         """Convert city name to IATA airport code using Amadeus API."""
         if not self.amadeus:
             logger.error("❌ Amadeus client not initialized. Cannot fetch airport code.")
@@ -38,14 +38,14 @@ class FlightTools:
             logger.exception(f"❌ Unexpected error in get_airport_code for '{city_name}': {e}")
             return None
 
-    def get_flights(self, origin_city, destination_city, departure_date, adults=1, top_n=3, currency="USD"):
+    def fetch_flights(self, origin_city, destination_city, departure_date, adults=1, top_n=3, currency="USD"):
         """Fetch top N cheapest flights between two cities using Amadeus API."""
         if not self.amadeus:
             logger.error("❌ Amadeus client not initialized. Cannot fetch flights.")
             return []
 
-        origin_code = self.get_airport_code(origin_city)
-        destination_code = self.get_airport_code(destination_city)
+        origin_code = self.fetch_airport_code(origin_city)
+        destination_code = self.fetch_airport_code(destination_city)
 
         if not origin_code or not destination_code:
             logger.error(f"❌ Invalid airport codes: {origin_city}={origin_code}, {destination_city}={destination_code}")
@@ -107,11 +107,11 @@ class FlightTools:
             logger.exception(f"❌ Unexpected error while fetching flights: {e}")
             return []
 
-    def get_return_flights(self, origin_city, destination_city, return_date, adults=1, top_n=3, currency="USD"):
+    def fetch_return_flights(self, origin_city, destination_city, return_date, adults=1, top_n=3, currency="USD"):
         """Fetch return flights (destination → origin)."""
         try:
             logger.info(f"🔄 Fetching return flights for {destination_city} → {origin_city} on {return_date}.")
-            return self.get_flights(destination_city, origin_city, return_date, adults, top_n, currency)
+            return self.fetch_flights(destination_city, origin_city, return_date, adults, top_n, currency)
         except Exception as e:
             logger.exception(f"❌ Error while fetching return flights: {e}")
             return []

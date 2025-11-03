@@ -15,7 +15,7 @@ class HotelTools:
         self.amadeus = AmadeusHelper.create_client(hostname="test")
         logger.info("HotelTools initialized with Amadeus test client")
 
-    def get_hotels(self, name, check_in, check_out, adults=1, room_quantity=1, currency="USD"):
+    def fetch_hotels(self, name, check_in, check_out, adults=1, room_quantity=1, currency="USD"):
         """Fetch hotel data using Google Hotels via SerpAPI."""
         logger.info(
             f"Fetching hotels for {name} | check-in: {check_in}, check-out: {check_out}, adults: {adults}"

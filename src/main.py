@@ -38,7 +38,7 @@ def load_travel_planner_agent():
                 graph = graph_builder.setup_graph()
                 logger.info("Graph setup completed successfully.")
                 # st.image(img, caption="Generated Graph")
-                DisplayResultStreamlit(graph, user_msg).display_result_on_ui()
+                DisplayResultStreamlit(graph, user_msg).render_result_on_ui()
                 logger.info("Result displayed successfully on Streamlit UI.")
             except Exception as e:
                 logger.exception("Error while setting up graph: %s", str(e))

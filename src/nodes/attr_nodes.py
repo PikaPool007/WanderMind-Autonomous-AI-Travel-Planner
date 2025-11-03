@@ -13,7 +13,7 @@ class AttractionNodes:
         self.llm = llm
         logger.info("AttractionNodes initialized with LLM instance")
 
-    def get_attr_details(self, state: TravelPlanState) -> dict:
+    def fetch_attr_data(self, state: TravelPlanState) -> dict:
         """
         Retrieve attraction details and store them in AttractionsState.all_attr_data.
         """
@@ -39,7 +39,7 @@ class AttractionNodes:
             logger.exception(f"Error occurred while fetching attraction details: {e}")
             raise
 
-    def get_top_attr_details(self, state: TravelPlanState) -> dict:
+    def summarize_attr_data(self, state: TravelPlanState) -> dict:
         """
         Generate top attraction recommendations based on user's travel details.
         """

@@ -61,6 +61,15 @@ src/
 ├── uiconfig.py # Streamlit UI configuration
 └── uiconfig.ini # UI settings
 ```
+---
+
+### Naming Convention
+- `fetch_`: API or external data calls  
+- `parse_`: Parsing user inputted free text to get user_data  
+- `summarize_` / `generate_`: LLM-based reasoning or synthesis  
+- `create_` / `load_` / `setup_`: Initialization and setup functions  
+- `render_`: Output or UI rendering  
+- `get_`: Only for simple property accessors
 
 ---
 

@@ -13,7 +13,7 @@ class HotelNodes:
         self.llm = llm
         logger.info("HotelNodes initialized with LLM instance")
 
-    def get_hotel_data(self, state: TravelPlanState) -> dict:
+    def fetch_hotel_data(self, state: TravelPlanState) -> dict:
         """
         Fetch hotel details using Amadeus API and store in state.
         """
@@ -32,7 +32,7 @@ class HotelNodes:
             )
 
             hotel_tool = HotelTools()
-            hotels = hotel_tool.get_hotels(
+            hotels = hotel_tool.fetch_hotels(
                 name=city_name,
                 check_in=check_in,
                 check_out=check_out,
@@ -53,7 +53,7 @@ class HotelNodes:
             logger.exception(f"Error occurred while fetching hotel data: {e}")
             raise
 
-    def get_top_hotels(self, state: TravelPlanState) -> dict:
+    def summarize_hotel_data(self, state: TravelPlanState) -> dict:
         """
         Use Azure LLM to generate summarized top hotel recommendations.
         """

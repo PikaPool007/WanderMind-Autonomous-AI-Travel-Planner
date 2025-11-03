@@ -16,7 +16,7 @@ class FlightNodes:
     # -------------------------------------------------------
     # 1️⃣ Retrieve flight details
     # -------------------------------------------------------
-    def get_flight_data(self, state: TravelPlanState) -> dict:
+    def fetch_flight_data(self, state: TravelPlanState) -> dict:
         """
         Fetch flight details using Amadeus API and store them in the state.
         """
@@ -34,14 +34,14 @@ class FlightNodes:
             )
 
             flight_tool = FlightTools()
-            outbound_flights = flight_tool.get_flights(
+            outbound_flights = flight_tool.fetch_flights(
                 origin_city, destination_city, departure_date, adults, top_n=5
             )
             logger.info(f"Retrieved {len(outbound_flights)} outbound flight options")
 
             return_flights = []
             if return_date:
-                return_flights = flight_tool.get_return_flights(
+                return_flights = flight_tool.fetch_return_flights(
                     origin_city, destination_city, return_date, adults, top_n=5
                 )
                 logger.info(f"Retrieved {len(return_flights)} return flight options")
@@ -63,7 +63,7 @@ class FlightNodes:
     # -------------------------------------------------------
     # 2️⃣ Summarize top flights with LLM
     # -------------------------------------------------------
-    def get_top_flight_summary(self, state: TravelPlanState) -> dict:
+    def summarize_flight_data(self, state: TravelPlanState) -> dict:
         """
         Use Azure LLM to generate summarized flight recommendations.
         """

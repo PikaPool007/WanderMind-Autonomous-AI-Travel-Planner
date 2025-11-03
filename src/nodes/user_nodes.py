@@ -22,7 +22,7 @@ class UserNodes:
         self.llm = llm
         logger.info("Initialized UserNodes with provided LLM instance.")
 
-    def fetch_user_data(self, state: TravelPlanState):
+    def parse_user_input(self, state: TravelPlanState):
         """
         Extract structured travel details from user's free-text input using the LLM.
         Output is stored in state['user_data'] as a dict.

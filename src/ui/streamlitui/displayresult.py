@@ -66,7 +66,7 @@ class DisplayResultStreamlit:
             logger.error(f"❌ Error generating itinerary PDF: {e}", exc_info=True)
             return b""
 
-    def display_result_on_ui(self):
+    def render_result_on_ui(self):
         """Stream results from LangGraph and render them on Streamlit UI."""
         graph = self.graph
         user_message = self.user_message

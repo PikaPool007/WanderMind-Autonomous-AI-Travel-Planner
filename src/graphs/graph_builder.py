@@ -17,7 +17,7 @@ class GraphBuilder:
         self.graph_builder = StateGraph(TravelPlanState)
         logger.info("GraphBuilder initialized with provided LLM model")
 
-    def travel_planner_agent_build_graph(self):
+    def create_travel_planner_agent_graph(self):
         logger.info("Building travel planner state graph...")
 
         attr_nodes = AttractionNodes(self.llm)
@@ -27,27 +27,27 @@ class GraphBuilder:
         itinerary_nodes = ItineraryNodes(self.llm)
 
         logger.info("Adding nodes to the state graph")
-        self.graph_builder.add_node("fetch_user_data", user_nodes.fetch_user_data)
-        self.graph_builder.add_node("get_flight_details", flight_nodes.get_flight_data)
-        self.graph_builder.add_node("get_top_flight_details", flight_nodes.get_top_flight_summary)
-        self.graph_builder.add_node("get_hotel_details", hotel_nodes.get_hotel_data)
-        self.graph_builder.add_node("get_top_hotel_details", hotel_nodes.get_top_hotels)
-        self.graph_builder.add_node("get_attr_details", attr_nodes.get_attr_details)
-        self.graph_builder.add_node("get_top_attr_details", attr_nodes.get_top_attr_details)
-        self.graph_builder.add_node("get_itineary", itinerary_nodes.get_itinerary)
+        self.graph_builder.add_node("fetch_user_data", user_nodes.parse_user_input)
+        self.graph_builder.add_node("fetch_flight_data", flight_nodes.fetch_flight_data)
+        self.graph_builder.add_node("summarize_flight_data", flight_nodes.summarize_flight_data)
+        self.graph_builder.add_node("fetch_hotel_data", hotel_nodes.fetch_hotel_data)
+        self.graph_builder.add_node("summarize_hotel_data", hotel_nodes.summarize_hotel_data)
+        self.graph_builder.add_node("fetch_attr_data", attr_nodes.fetch_attr_data)
+        self.graph_builder.add_node("summarize_attr_data", attr_nodes.summarize_attr_data)
+        self.graph_builder.add_node("generate_itinerary", itinerary_nodes.generate_itinerary)
 
         logger.info("Setting entry point and transitions between nodes")
         self.graph_builder.set_entry_point("fetch_user_data")
-        self.graph_builder.add_edge("fetch_user_data", "get_flight_details")
-        self.graph_builder.add_edge("fetch_user_data", "get_hotel_details")
-        self.graph_builder.add_edge("fetch_user_data", "get_attr_details")
-        self.graph_builder.add_edge("get_hotel_details", "get_top_hotel_details")
-        self.graph_builder.add_edge("get_flight_details", "get_top_flight_details")
-        self.graph_builder.add_edge("get_attr_details", "get_top_attr_details")
-        self.graph_builder.add_edge("get_top_flight_details", "get_itineary")
-        self.graph_builder.add_edge("get_top_hotel_details", "get_itineary")
-        self.graph_builder.add_edge("get_top_attr_details", "get_itineary")
-        self.graph_builder.add_edge("get_itineary", END)
+        self.graph_builder.add_edge("fetch_user_data", "fetch_flight_data")
+        self.graph_builder.add_edge("fetch_user_data", "fetch_hotel_data")
+        self.graph_builder.add_edge("fetch_user_data", "fetch_attr_data")
+        self.graph_builder.add_edge("fetch_hotel_data", "summarize_hotel_data")
+        self.graph_builder.add_edge("fetch_flight_data", "summarize_flight_data")
+        self.graph_builder.add_edge("fetch_attr_data", "summarize_attr_data")
+        self.graph_builder.add_edge("summarize_flight_data", "generate_itinerary")
+        self.graph_builder.add_edge("summarize_hotel_data", "generate_itinerary")
+        self.graph_builder.add_edge("summarize_attr_data", "generate_itinerary")
+        self.graph_builder.add_edge("generate_itinerary", END)
 
         logger.info("State graph build completed successfully ✅")
 
@@ -57,7 +57,7 @@ class GraphBuilder:
         """
         logger.info("Setting up state graph for travel planner agent")
 
-        self.travel_planner_agent_build_graph()
+        self.create_travel_planner_agent_graph()
         graph = self.graph_builder.compile()
 
         logger.info("Graph compiled successfully ✅")

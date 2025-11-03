@@ -14,7 +14,7 @@ class ItineraryNodes:
         self.llm = llm
         logger.info("Initialized ItineraryNodes with provided LLM instance.")
 
-    def get_itinerary(self, state: TravelPlanState) -> Dict:
+    def generate_itinerary(self, state: TravelPlanState) -> Dict:
         logger.info("Starting itinerary generation process.")
 
         try:
