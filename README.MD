@@ -1,7 +1,7 @@
-# 🧭 Travel Planner Agent
+# 🧭 WanderMind - A Travel Planner Agent
 
 ## 📘 Overview
-The **Travel Planner Agent** is an AI-powered system designed to generate personalized travel itineraries based on user preferences such as destination, travel dates, budget, and interests.  
+The **WanderMind** is an AI-powered system designed to generate personalized travel itineraries based on user preferences such as destination, travel dates, budget, and interests.  
 It leverages **Agentic AI**, Large Language Models (LLMs) and external APIs (like Amadeus) to integrate real-time flight, hotel, and sightseeing data into a seamless, day-wise itinerary.
 
 This project demonstrates the power of **Generative AI and Agentic Architecture** in creating intelligent, user-driven planning experiences.
@@ -63,7 +63,7 @@ src/
 ```
 ---
 
-### Naming Convention
+### Naming Convention for Functions
 - `fetch_`: API or external data calls  
 - `parse_`: Parsing user inputted free text to get user_data  
 - `summarize_` / `generate_`: LLM-based reasoning or synthesis  
