@@ -122,5 +122,12 @@ class HotelNodes:
             }
 
         except Exception as e:
-            logger.exception(f"Error while generating top hotel recommendations: {e}")
-            raise
+            logger.exception(f"Hotel recommendation summarization failed. Using fallback message.")
+
+            return {
+                "hotels": {
+                    "all_hotel_data": state["hotels"].get("all_hotel_data", []),
+                    "top_hotel_data": "[No hotel recommendations available — consider adjusting dates, filters or searching manually.]"
+                }
+            }
+

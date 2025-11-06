@@ -87,6 +87,16 @@ The project follows a **modular, agentic, and parallelized architecture** that e
 
 A visual representation of the graph can be found in `Graph_image.jpg`.
 
+### Robust Failure Handling
+The system now gracefully handles cases where one or more external data sources are unavailable (e.g., Amadeus flight API downtime, missing hotel results, incomplete attraction data). Instead of breaking the itinerary generation flow:
+
+- Each data retrieval module returns structured fallback responses.
+- The itinerary generator continues seamlessly using available data.
+- The UI displays clear contextual warnings (e.g., “Live flight data unavailable — showing itinerary without flight recommendations.”)
+- The final itinerary still remains complete and readable.
+
+This ensures the system is reliable even when external services are partially unavailable.
+
 ---
 
 ## 🚀 Setup and Installation
@@ -143,6 +153,9 @@ Refer to `requirements.txt` for full dependency details.
 
 - **Collaborative Trip Mode:**  
   Introduce a shared planning mode where multiple users can co-create an itinerary, merge preferences, and finalize trip details together.  
+
+- **Clarity in error messages:**
+Add dynamic retry + caching strategy for flight/hotel APIs to further reduce dependency on live responses.
 
 ---
 

@@ -145,5 +145,12 @@ class FlightNodes:
             }
 
         except Exception as e:
-            logger.exception(f"Error while generating flight summary: {e}")
-            raise
+            logger.exception(f"⚠️ Flight summary generation failed. Using fallback message.")
+            return {
+                "flights": {
+                    "outbound_flights": state["flights"].get("outbound_flights", []),
+                    "return_flights": state["flights"].get("return_flights", []),
+                    "top_flight_summary": "[No flight details available due to temporary data issues. "
+                                        "Please book flights manually based on your preferred timing.]"
+                }
+            }

@@ -105,5 +105,11 @@ class AttractionNodes:
             }
 
         except Exception as e:
-            logger.exception(f"Error while generating top attraction recommendations: {e}")
-            raise
+            logger.exception(f"Attraction recommendation summarization failed. Using fallback message.")
+
+            return {
+                "attractions": {
+                    "all_attr_data": state["attractions"].get("all_attr_data", []),
+                    "top_attr_data": "[No attraction recommendations available — limited or missing destination data.]"
+                }
+            }

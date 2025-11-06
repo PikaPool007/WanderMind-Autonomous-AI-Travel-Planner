@@ -63,7 +63,7 @@ class ItineraryNodes:
                     top_flight_data=state["flights"]["top_flight_summary"],
                     top_hotel_data=state["hotels"]["top_hotel_data"],
                     top_attr_data=state["attractions"]["top_attr_data"],
-                )
+                ), max_completion_tokens=3000
             )
 
             final_itinerary = response.content if isinstance(response, AIMessage) else response

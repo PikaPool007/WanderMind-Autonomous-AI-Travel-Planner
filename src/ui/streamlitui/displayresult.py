@@ -8,6 +8,8 @@ from bs4 import BeautifulSoup
 from io import BytesIO
 
 from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
+
+from src.helper.output_check_helper import _extract_recos
 from src.tools.logger import logger
 
 
@@ -84,9 +86,38 @@ class DisplayResultStreamlit:
 
                         if isinstance(value, dict) and "final_itinerary" in value:
                             itinerary = value["final_itinerary"]
+
+                            # 🔍 Access the full state object
+                            state = value  # this dict contains flights, hotels, attractions, final_itinerary
+
                             with st.chat_message("assistant"):
+
+                                # ⚠️ Show fallback warnings *only if triggered*
+                                flights = state.get("flights", {})
+                                if isinstance(flights.get("top_flight_summary"), str) and (flights["top_flight_summary"].startswith("[No") or flights["top_flight_summary"].find('[')== flights["top_flight_summary"].find(']')-1):
+                                    st.warning("✈️ Live flight data unavailable — showing itinerary without flight recommendations.")
+
+                                hotels = state.get("hotels", {})
+                                if isinstance(hotels.get("top_hotel_data"), str) and hotels["top_hotel_data"].startswith("[No"):
+                                    st.warning("🏨 Hotel data unavailable — some accommodation details could not be fetched.")
+
+                                attractions = state.get("attractions", {})
+                                if isinstance(attractions.get("top_attr_data"), str) and attractions["top_attr_data"].startswith("[No"):
+                                    st.warning("📍 Attraction recommendations limited — results based on available local data.")
+
+                                        # 2) warnings for *empty* but valid structured outputs
+                                if not isinstance(flights.get("top_flight_summary"), str) and len(_extract_recos(flights.get("top_flight_summary"))) == 0:
+                                    st.warning("✈️ No flight options retrieved. Please review availability manually.")
+                                if not isinstance(hotels.get("top_hotel_data"), str) and len(_extract_recos(hotels.get("top_hotel_data"))) == 0:
+                                    st.warning("🏨 No hotel options retrieved.")
+                                if not isinstance(attractions.get("top_attr_data"), str) and len(_extract_recos(attractions.get("top_attr_data"))) == 0:
+                                    st.warning("📍 No attraction options retrieved.")
+
+                                # 🧳 Now show the final itinerary
                                 st.markdown("### ✈️ Final Itinerary")
+                                print(itinerary)
                                 st.write(itinerary)
+
 
                                 # ✅ Generate and show PDF download button
                                 pdf_data = self.generate_pdf(itinerary)

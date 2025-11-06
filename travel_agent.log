@@ -1,0 +1,1760 @@
+2025-11-06 19:50:00,635 - travel_agent - INFO - Application started.
+2025-11-06 19:50:00,635 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 19:50:00,636 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 19:50:00,636 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 19:50:00,636 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 19:50:00,636 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 19:50:00,637 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 19:50:01,193 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 19:50:01,193 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 19:50:01,193 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 19:50:01,193 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 19:50:01,193 - travel_agent - INFO - Application executed successfully.
+2025-11-06 19:50:01,193 - travel_agent - INFO - Application shutdown.
+2025-11-06 19:51:24,884 - travel_agent - INFO - Application started.
+2025-11-06 19:51:24,885 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 19:51:24,886 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 19:51:24,886 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 19:51:24,886 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 19:51:24,886 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 19:51:24,886 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 19:51:24,886 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 19:51:24,886 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 19:51:24,886 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 19:51:24,888 - travel_agent - INFO - User input received: Going alone to LA from SF for a business trip of 3 days starting 23rd Dec 2026.  Could u give me an itinerary please.
+2025-11-06 19:51:24,888 - travel_agent - INFO - Initializing AzureChatOpenAI LLM model...
+2025-11-06 19:51:25,599 - travel_agent - INFO - \u2705 AzureChatOpenAI model initialized successfully
+2025-11-06 19:51:25,602 - travel_agent - INFO - LLM model loaded successfully.
+2025-11-06 19:51:25,602 - travel_agent - INFO - GraphBuilder initialized with provided LLM model
+2025-11-06 19:51:25,602 - travel_agent - INFO - Setting up state graph for travel planner agent
+2025-11-06 19:51:25,602 - travel_agent - INFO - Building travel planner state graph...
+2025-11-06 19:51:25,602 - travel_agent - INFO - AttractionNodes initialized with LLM instance
+2025-11-06 19:51:25,602 - travel_agent - INFO - HotelNodes initialized with LLM instance
+2025-11-06 19:51:25,603 - travel_agent - INFO - FlightNodes initialized with LLM instance
+2025-11-06 19:51:25,603 - travel_agent - INFO - Initialized UserNodes with provided LLM instance.
+2025-11-06 19:51:25,603 - travel_agent - INFO - Initialized ItineraryNodes with provided LLM instance.
+2025-11-06 19:51:25,603 - travel_agent - INFO - Adding nodes to the state graph
+2025-11-06 19:51:25,604 - travel_agent - INFO - Setting entry point and transitions between nodes
+2025-11-06 19:51:25,604 - travel_agent - INFO - State graph build completed successfully \u2705
+2025-11-06 19:51:25,614 - travel_agent - INFO - Graph compiled successfully \u2705
+2025-11-06 19:51:25,614 - travel_agent - INFO - Graph setup completed successfully.
+2025-11-06 19:51:25,614 - travel_agent - INFO - DisplayResultStreamlit initialized with new user message
+2025-11-06 19:51:25,614 - travel_agent - INFO - Displaying results on Streamlit UI
+2025-11-06 19:51:25,618 - travel_agent - INFO - Starting user data extraction process.
+2025-11-06 19:51:25,625 - travel_agent - INFO - Prompting LLM for user detail extraction.
+2025-11-06 19:51:27,435 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 19:51:27,448 - travel_agent - INFO - Successfully received structured user details from LLM.
+2025-11-06 19:51:27,448 - travel_agent - INFO - User data successfully extracted and parsed.
+2025-11-06 19:51:27,448 - travel_agent - INFO - \u2705 USER DATA EXTRACTION COMPLETED
+2025-11-06 19:51:27,450 - travel_agent - INFO - Fetching attraction details for city: LA
+2025-11-06 19:51:27,453 - travel_agent - INFO - Fetching flight data | Origin: SF, Destination: LA, Departure: 2026-12-23, Return: None, Adults: 1
+2025-11-06 19:51:27,453 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 19:51:27,455 - travel_agent - INFO - Fetching hotel data | City: LA, Check-in: 2026-12-23, Check-out: None, Adults: 1, Rooms: 1
+2025-11-06 19:51:27,456 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 19:51:27,456 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 19:51:27,456 - travel_agent - INFO - \u2708\ufe0f Initialized Amadeus client successfully (test environment).
+2025-11-06 19:51:27,457 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 19:51:27,458 - travel_agent - INFO - HotelTools initialized with Amadeus test client
+2025-11-06 19:51:27,466 - travel_agent - INFO - Fetching hotels for LA | check-in: 2026-12-23, check-out: None, adults: 1
+2025-11-06 19:51:27,496 - travel_agent - INFO - \u2705 Successfully loaded attractions dataset from combined.csv
+2025-11-06 19:51:27,497 - travel_agent - INFO - Initializing Azure embeddings model...
+2025-11-06 19:51:27,519 - travel_agent - INFO - \u2705 Embeddings model initialized successfully
+2025-11-06 19:51:27,520 - travel_agent - INFO - \U0001f4c1 Existing vector database found, loading from disk.
+2025-11-06 19:51:27,583 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-06 19:51:28,354 - travel_agent - INFO - \u2705 Retrieved 0 hotel results for LA
+2025-11-06 19:51:28,354 - travel_agent - INFO - Retrieved 0 hotels for LA
+2025-11-06 19:51:28,363 - travel_agent - INFO - \U0001f50d Successfully created Chroma retriever.
+2025-11-06 19:51:29,082 - travel_agent - INFO - \U0001f6eb Found airport code for SF: SFO
+2025-11-06 19:51:29,839 - travel_agent - INFO - \U0001f6eb Found airport code for LA: LAX
+2025-11-06 19:51:29,840 - travel_agent - INFO - \U0001f50d Fetching flights from SFO \u2192 LAX on 2026-12-23 for 1 adult(s).
+2025-11-06 19:51:30,929 - travel_agent - ERROR - \u274c Amadeus API error while fetching flights: [400]
+Traceback (most recent call last):
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\src\tools\tools_for_flights.py", line 57, in fetch_flights
+    response = self.amadeus.shopping.flight_offers_search.get(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\amadeus\shopping\_flight_offers_search.py", line 32, in get
+    return self.client.get('/v2/shopping/flight-offers', **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\amadeus\mixins\http.py", line 40, in get
+    return self.request('GET', path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\amadeus\mixins\http.py", line 110, in request
+    return self._unauthenticated_request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\amadeus\mixins\http.py", line 126, in _unauthenticated_request
+    return self.__execute(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\amadeus\mixins\http.py", line 152, in __execute
+    response._detect_error(self)
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\amadeus\mixins\parser.py", line 16, in _detect_error
+    self.__raise_error(error, client)
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\amadeus\mixins\parser.py", line 68, in __raise_error
+    raise error
+amadeus.client.errors.ClientError: [400]
+
+2025-11-06 19:51:30,929 - travel_agent - INFO - Retrieved 0 outbound flight options
+2025-11-06 19:51:30,929 - travel_agent - INFO - Flight data fetched successfully
+2025-11-06 19:51:32,319 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-11-06 19:51:32,399 - travel_agent - INFO - Retrieved attraction details for LA successfully
+2025-11-06 19:51:32,399 - travel_agent - INFO - Starting top attraction recommendations generation
+2025-11-06 19:51:32,399 - travel_agent - INFO - Starting top flight summary generation
+2025-11-06 19:51:32,399 - travel_agent - INFO - Starting top hotel recommendations generation
+2025-11-06 19:51:32,399 - travel_agent - INFO - Structured LLM model prepared for top attraction recommendations
+2025-11-06 19:51:32,407 - travel_agent - INFO - Structured LLM model prepared for hotel recommendations
+2025-11-06 19:51:32,410 - travel_agent - INFO - Structured LLM model prepared for flight recommendations
+2025-11-06 19:51:32,410 - travel_agent - INFO - Invoking LLM for top attractions in LA
+2025-11-06 19:51:32,410 - travel_agent - INFO - Invoking LLM for top hotels in LA
+2025-11-06 19:51:32,410 - travel_agent - INFO - Invoking LLM for flight summary | Route: SF \u2192 LA
+2025-11-06 19:51:33,503 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 19:51:33,518 - travel_agent - INFO - Successfully generated top attraction recommendations for LA
+2025-11-06 19:51:33,594 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 19:51:33,601 - travel_agent - INFO - Successfully generated top hotel recommendations for LA
+2025-11-06 19:51:33,864 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 19:51:33,872 - travel_agent - INFO - Successfully generated top flight summary
+2025-11-06 19:51:33,873 - travel_agent - INFO - Starting itinerary generation process.
+2025-11-06 19:51:33,873 - travel_agent - INFO - Prompt template for itinerary successfully created.
+2025-11-06 19:51:38,560 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 19:51:38,560 - travel_agent - INFO - Successfully generated itinerary from LLM response.
+2025-11-06 19:51:38,560 - travel_agent - INFO - Generating itinerary PDF...
+2025-11-06 19:51:38,584 - travel_agent - INFO - \u2705 PDF generated successfully
+2025-11-06 19:51:38,586 - travel_agent - INFO - Final itinerary displayed and PDF download enabled
+2025-11-06 19:51:38,586 - travel_agent - INFO - Result displayed successfully on Streamlit UI.
+2025-11-06 19:51:38,586 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 19:51:38,587 - travel_agent - INFO - Application executed successfully.
+2025-11-06 19:51:38,587 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:02:16,666 - travel_agent - INFO - Application started.
+2025-11-06 20:02:16,666 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:02:16,666 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:02:16,666 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:02:16,666 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:02:16,666 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:02:16,666 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:02:16,907 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:02:16,907 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:02:16,908 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:02:16,908 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:02:16,908 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:02:16,909 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:02:36,765 - travel_agent - INFO - Application started.
+2025-11-06 20:02:36,766 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:02:36,766 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:02:36,766 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:02:36,768 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:02:36,768 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:02:36,768 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:02:36,770 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:02:36,770 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:02:36,770 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:02:36,771 - travel_agent - INFO - User input received: Travelling from Bangalore to Kolkata for a cultural trip with my 3 friends from 23-11-2025 to 26-11-2025.
+2025-11-06 20:02:36,771 - travel_agent - INFO - Initializing AzureChatOpenAI LLM model...
+2025-11-06 20:02:37,043 - travel_agent - INFO - \u2705 AzureChatOpenAI model initialized successfully
+2025-11-06 20:02:37,043 - travel_agent - INFO - LLM model loaded successfully.
+2025-11-06 20:02:37,043 - travel_agent - INFO - GraphBuilder initialized with provided LLM model
+2025-11-06 20:02:37,043 - travel_agent - INFO - Setting up state graph for travel planner agent
+2025-11-06 20:02:37,043 - travel_agent - INFO - Building travel planner state graph...
+2025-11-06 20:02:37,043 - travel_agent - INFO - AttractionNodes initialized with LLM instance
+2025-11-06 20:02:37,043 - travel_agent - INFO - HotelNodes initialized with LLM instance
+2025-11-06 20:02:37,043 - travel_agent - INFO - FlightNodes initialized with LLM instance
+2025-11-06 20:02:37,043 - travel_agent - INFO - Initialized UserNodes with provided LLM instance.
+2025-11-06 20:02:37,043 - travel_agent - INFO - Initialized ItineraryNodes with provided LLM instance.
+2025-11-06 20:02:37,056 - travel_agent - INFO - Adding nodes to the state graph
+2025-11-06 20:02:37,056 - travel_agent - INFO - Setting entry point and transitions between nodes
+2025-11-06 20:02:37,056 - travel_agent - INFO - State graph build completed successfully \u2705
+2025-11-06 20:02:37,069 - travel_agent - INFO - Graph compiled successfully \u2705
+2025-11-06 20:02:37,069 - travel_agent - INFO - Graph setup completed successfully.
+2025-11-06 20:02:37,069 - travel_agent - INFO - DisplayResultStreamlit initialized with new user message
+2025-11-06 20:02:37,069 - travel_agent - INFO - Displaying results on Streamlit UI
+2025-11-06 20:02:37,074 - travel_agent - INFO - Starting user data extraction process.
+2025-11-06 20:02:37,074 - travel_agent - INFO - Prompting LLM for user detail extraction.
+2025-11-06 20:02:38,959 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:02:38,969 - travel_agent - INFO - Successfully received structured user details from LLM.
+2025-11-06 20:02:38,969 - travel_agent - INFO - User data successfully extracted and parsed.
+2025-11-06 20:02:38,969 - travel_agent - INFO - \u2705 USER DATA EXTRACTION COMPLETED
+2025-11-06 20:02:38,969 - travel_agent - INFO - Fetching attraction details for city: Kolkata
+2025-11-06 20:02:38,979 - travel_agent - INFO - Fetching flight data | Origin: Bangalore, Destination: Kolkata, Departure: 2025-11-23, Return: 2025-11-26, Adults: 4
+2025-11-06 20:02:38,979 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:02:38,979 - travel_agent - INFO - Fetching hotel data | City: Kolkata, Check-in: 2025-11-23, Check-out: 2025-11-26, Adults: 4, Rooms: 1
+2025-11-06 20:02:38,982 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:02:38,982 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:02:38,982 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:02:38,982 - travel_agent - INFO - \u2708\ufe0f Initialized Amadeus client successfully (test environment).
+2025-11-06 20:02:38,982 - travel_agent - INFO - HotelTools initialized with Amadeus test client
+2025-11-06 20:02:38,984 - travel_agent - INFO - Fetching hotels for Kolkata | check-in: 2025-11-23, check-out: 2025-11-26, adults: 4
+2025-11-06 20:02:39,013 - travel_agent - INFO - \u2705 Successfully loaded attractions dataset from combined.csv
+2025-11-06 20:02:39,013 - travel_agent - INFO - Initializing Azure embeddings model...
+2025-11-06 20:02:39,056 - travel_agent - INFO - \u2705 Embeddings model initialized successfully
+2025-11-06 20:02:39,057 - travel_agent - INFO - \U0001f4c1 Existing vector database found, loading from disk.
+2025-11-06 20:02:39,066 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-06 20:02:39,143 - travel_agent - INFO - \U0001f50d Successfully created Chroma retriever.
+2025-11-06 20:02:40,193 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:02:40,244 - travel_agent - INFO - Retrieved attraction details for Kolkata successfully
+2025-11-06 20:02:40,656 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:02:41,376 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:02:41,376 - travel_agent - INFO - \U0001f50d Fetching flights from BAN \u2192 CCU on 2025-11-23 for 4 adult(s).
+2025-11-06 20:02:41,907 - travel_agent - INFO - \u2705 Retrieved 20 hotel results for Kolkata
+2025-11-06 20:02:41,908 - travel_agent - INFO - Retrieved 20 hotels for Kolkata
+2025-11-06 20:02:42,394 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route BAN \u2192 CCU.
+2025-11-06 20:02:42,409 - travel_agent - INFO - Retrieved 0 outbound flight options
+2025-11-06 20:02:42,409 - travel_agent - INFO - \U0001f504 Fetching return flights for Kolkata \u2192 Bangalore on 2025-11-26.
+2025-11-06 20:02:43,241 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:02:44,021 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:02:44,021 - travel_agent - INFO - \U0001f50d Fetching flights from CCU \u2192 BAN on 2025-11-26 for 4 adult(s).
+2025-11-06 20:02:45,072 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route CCU \u2192 BAN.
+2025-11-06 20:02:45,072 - travel_agent - INFO - Retrieved 0 return flight options
+2025-11-06 20:02:45,072 - travel_agent - INFO - Flight data fetched successfully
+2025-11-06 20:02:45,072 - travel_agent - INFO - Starting top attraction recommendations generation
+2025-11-06 20:02:45,072 - travel_agent - INFO - Starting top flight summary generation
+2025-11-06 20:02:45,072 - travel_agent - INFO - Starting top hotel recommendations generation
+2025-11-06 20:02:45,072 - travel_agent - INFO - Structured LLM model prepared for top attraction recommendations
+2025-11-06 20:02:45,086 - travel_agent - INFO - Structured LLM model prepared for flight recommendations
+2025-11-06 20:02:45,091 - travel_agent - INFO - Structured LLM model prepared for hotel recommendations
+2025-11-06 20:02:45,091 - travel_agent - INFO - Invoking LLM for top attractions in Kolkata
+2025-11-06 20:02:45,091 - travel_agent - INFO - Invoking LLM for flight summary | Route: Bangalore \u2192 Kolkata
+2025-11-06 20:02:45,091 - travel_agent - INFO - Invoking LLM for top hotels in Kolkata
+2025-11-06 20:02:46,415 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:02:46,415 - travel_agent - INFO - Successfully generated top flight summary
+2025-11-06 20:02:47,546 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:02:47,546 - travel_agent - INFO - Successfully generated top attraction recommendations for Kolkata
+2025-11-06 20:02:49,963 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:02:49,979 - travel_agent - INFO - Successfully generated top hotel recommendations for Kolkata
+2025-11-06 20:02:49,979 - travel_agent - INFO - Starting itinerary generation process.
+2025-11-06 20:02:49,979 - travel_agent - INFO - Prompt template for itinerary successfully created.
+2025-11-06 20:02:57,058 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:02:57,058 - travel_agent - INFO - Successfully generated itinerary from LLM response.
+2025-11-06 20:02:57,058 - travel_agent - INFO - Generating itinerary PDF...
+2025-11-06 20:02:57,090 - travel_agent - INFO - \u2705 PDF generated successfully
+2025-11-06 20:02:57,091 - travel_agent - INFO - Final itinerary displayed and PDF download enabled
+2025-11-06 20:02:57,092 - travel_agent - INFO - Result displayed successfully on Streamlit UI.
+2025-11-06 20:02:57,092 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:02:57,092 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:02:57,092 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:03:11,200 - travel_agent - INFO - Application started.
+2025-11-06 20:03:11,201 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:03:11,202 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:03:11,202 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:03:11,202 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:03:11,202 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:03:11,203 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:03:11,204 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:03:11,204 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:03:11,204 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:03:11,205 - travel_agent - INFO - User input received: Travelling from Bengaluru to Kolkata for a cultural trip with my 3 friends from 23-11-2025 to 26-11-2025.
+2025-11-06 20:03:11,205 - travel_agent - INFO - Initializing AzureChatOpenAI LLM model...
+2025-11-06 20:03:11,245 - travel_agent - INFO - \u2705 AzureChatOpenAI model initialized successfully
+2025-11-06 20:03:11,246 - travel_agent - INFO - LLM model loaded successfully.
+2025-11-06 20:03:11,246 - travel_agent - INFO - GraphBuilder initialized with provided LLM model
+2025-11-06 20:03:11,247 - travel_agent - INFO - Setting up state graph for travel planner agent
+2025-11-06 20:03:11,247 - travel_agent - INFO - Building travel planner state graph...
+2025-11-06 20:03:11,247 - travel_agent - INFO - AttractionNodes initialized with LLM instance
+2025-11-06 20:03:11,247 - travel_agent - INFO - HotelNodes initialized with LLM instance
+2025-11-06 20:03:11,248 - travel_agent - INFO - FlightNodes initialized with LLM instance
+2025-11-06 20:03:11,248 - travel_agent - INFO - Initialized UserNodes with provided LLM instance.
+2025-11-06 20:03:11,248 - travel_agent - INFO - Initialized ItineraryNodes with provided LLM instance.
+2025-11-06 20:03:11,249 - travel_agent - INFO - Adding nodes to the state graph
+2025-11-06 20:03:11,250 - travel_agent - INFO - Setting entry point and transitions between nodes
+2025-11-06 20:03:11,250 - travel_agent - INFO - State graph build completed successfully \u2705
+2025-11-06 20:03:11,267 - travel_agent - INFO - Graph compiled successfully \u2705
+2025-11-06 20:03:11,267 - travel_agent - INFO - Graph setup completed successfully.
+2025-11-06 20:03:11,267 - travel_agent - INFO - DisplayResultStreamlit initialized with new user message
+2025-11-06 20:03:11,268 - travel_agent - INFO - Displaying results on Streamlit UI
+2025-11-06 20:03:11,270 - travel_agent - INFO - Starting user data extraction process.
+2025-11-06 20:03:11,272 - travel_agent - INFO - Prompting LLM for user detail extraction.
+2025-11-06 20:03:12,908 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:03:12,917 - travel_agent - INFO - Successfully received structured user details from LLM.
+2025-11-06 20:03:12,917 - travel_agent - INFO - User data successfully extracted and parsed.
+2025-11-06 20:03:12,917 - travel_agent - INFO - \u2705 USER DATA EXTRACTION COMPLETED
+2025-11-06 20:03:12,917 - travel_agent - INFO - Fetching attraction details for city: Kolkata
+2025-11-06 20:03:12,928 - travel_agent - INFO - Fetching flight data | Origin: Bengaluru, Destination: Kolkata, Departure: 2025-11-23, Return: 2025-11-26, Adults: 4
+2025-11-06 20:03:12,928 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:03:12,928 - travel_agent - INFO - Fetching hotel data | City: Kolkata, Check-in: 2025-11-23, Check-out: 2025-11-26, Adults: 4, Rooms: 1
+2025-11-06 20:03:12,928 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:03:12,928 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:03:12,928 - travel_agent - INFO - \u2708\ufe0f Initialized Amadeus client successfully (test environment).
+2025-11-06 20:03:12,928 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:03:12,928 - travel_agent - INFO - HotelTools initialized with Amadeus test client
+2025-11-06 20:03:12,928 - travel_agent - INFO - Fetching hotels for Kolkata | check-in: 2025-11-23, check-out: 2025-11-26, adults: 4
+2025-11-06 20:03:12,965 - travel_agent - INFO - \u2705 Successfully loaded attractions dataset from combined.csv
+2025-11-06 20:03:12,966 - travel_agent - INFO - Initializing Azure embeddings model...
+2025-11-06 20:03:13,000 - travel_agent - INFO - \u2705 Embeddings model initialized successfully
+2025-11-06 20:03:13,005 - travel_agent - INFO - \U0001f4c1 Existing vector database found, loading from disk.
+2025-11-06 20:03:13,030 - travel_agent - INFO - \U0001f50d Successfully created Chroma retriever.
+2025-11-06 20:03:13,150 - travel_agent - INFO - \u2705 Retrieved 20 hotel results for Kolkata
+2025-11-06 20:03:13,150 - travel_agent - INFO - Retrieved 20 hotels for Kolkata
+2025-11-06 20:03:14,035 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:03:14,043 - travel_agent - INFO - Retrieved attraction details for Kolkata successfully
+2025-11-06 20:03:14,610 - travel_agent - INFO - \U0001f6eb Found airport code for Bengaluru: BLR
+2025-11-06 20:03:15,409 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:03:15,409 - travel_agent - INFO - \U0001f50d Fetching flights from BLR \u2192 CCU on 2025-11-23 for 4 adult(s).
+2025-11-06 20:03:18,231 - travel_agent - INFO - \u2705 Retrieved 5 flight(s) for route BLR \u2192 CCU.
+2025-11-06 20:03:18,231 - travel_agent - INFO - Retrieved 5 outbound flight options
+2025-11-06 20:03:18,231 - travel_agent - INFO - \U0001f504 Fetching return flights for Kolkata \u2192 Bengaluru on 2025-11-26.
+2025-11-06 20:03:19,015 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:03:19,857 - travel_agent - INFO - \U0001f6eb Found airport code for Bengaluru: BLR
+2025-11-06 20:03:19,857 - travel_agent - INFO - \U0001f50d Fetching flights from CCU \u2192 BLR on 2025-11-26 for 4 adult(s).
+2025-11-06 20:03:22,582 - travel_agent - INFO - \u2705 Retrieved 5 flight(s) for route CCU \u2192 BLR.
+2025-11-06 20:03:22,582 - travel_agent - INFO - Retrieved 5 return flight options
+2025-11-06 20:03:22,582 - travel_agent - INFO - Flight data fetched successfully
+2025-11-06 20:03:22,582 - travel_agent - INFO - Starting top attraction recommendations generation
+2025-11-06 20:03:22,582 - travel_agent - INFO - Starting top flight summary generation
+2025-11-06 20:03:22,582 - travel_agent - INFO - Starting top hotel recommendations generation
+2025-11-06 20:03:22,582 - travel_agent - INFO - Structured LLM model prepared for top attraction recommendations
+2025-11-06 20:03:22,582 - travel_agent - INFO - Structured LLM model prepared for flight recommendations
+2025-11-06 20:03:22,591 - travel_agent - INFO - Structured LLM model prepared for hotel recommendations
+2025-11-06 20:03:22,591 - travel_agent - INFO - Invoking LLM for top attractions in Kolkata
+2025-11-06 20:03:22,591 - travel_agent - INFO - Invoking LLM for flight summary | Route: Bengaluru \u2192 Kolkata
+2025-11-06 20:03:22,591 - travel_agent - INFO - Invoking LLM for top hotels in Kolkata
+2025-11-06 20:03:24,696 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:03:24,696 - travel_agent - INFO - Successfully generated top flight summary
+2025-11-06 20:03:25,002 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:03:25,002 - travel_agent - INFO - Successfully generated top attraction recommendations for Kolkata
+2025-11-06 20:03:26,181 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:03:26,188 - travel_agent - INFO - Successfully generated top hotel recommendations for Kolkata
+2025-11-06 20:03:26,188 - travel_agent - INFO - Starting itinerary generation process.
+2025-11-06 20:03:26,188 - travel_agent - INFO - Prompt template for itinerary successfully created.
+2025-11-06 20:03:35,642 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:03:35,643 - travel_agent - INFO - Successfully generated itinerary from LLM response.
+2025-11-06 20:03:35,645 - travel_agent - INFO - Generating itinerary PDF...
+2025-11-06 20:03:35,665 - travel_agent - INFO - \u2705 PDF generated successfully
+2025-11-06 20:03:35,667 - travel_agent - INFO - Final itinerary displayed and PDF download enabled
+2025-11-06 20:03:35,668 - travel_agent - INFO - Result displayed successfully on Streamlit UI.
+2025-11-06 20:03:35,668 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:03:35,668 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:03:35,669 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:07:11,174 - travel_agent - INFO - Application started.
+2025-11-06 20:07:11,174 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:07:11,175 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:07:11,175 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:07:11,175 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:07:11,175 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:07:11,176 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:07:11,176 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:07:11,176 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:07:11,177 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:07:11,177 - travel_agent - INFO - User input received: Travelling from Bangalore to Kolkata for a cultural trip with my 3 friends from 23-11-2025 to 26-11-2025.
+2025-11-06 20:07:11,177 - travel_agent - INFO - Initializing AzureChatOpenAI LLM model...
+2025-11-06 20:07:11,202 - travel_agent - INFO - \u2705 AzureChatOpenAI model initialized successfully
+2025-11-06 20:07:11,202 - travel_agent - INFO - LLM model loaded successfully.
+2025-11-06 20:07:11,202 - travel_agent - INFO - GraphBuilder initialized with provided LLM model
+2025-11-06 20:07:11,202 - travel_agent - INFO - Setting up state graph for travel planner agent
+2025-11-06 20:07:11,202 - travel_agent - INFO - Building travel planner state graph...
+2025-11-06 20:07:11,202 - travel_agent - INFO - AttractionNodes initialized with LLM instance
+2025-11-06 20:07:11,203 - travel_agent - INFO - HotelNodes initialized with LLM instance
+2025-11-06 20:07:11,203 - travel_agent - INFO - FlightNodes initialized with LLM instance
+2025-11-06 20:07:11,203 - travel_agent - INFO - Initialized UserNodes with provided LLM instance.
+2025-11-06 20:07:11,203 - travel_agent - INFO - Initialized ItineraryNodes with provided LLM instance.
+2025-11-06 20:07:11,203 - travel_agent - INFO - Adding nodes to the state graph
+2025-11-06 20:07:11,203 - travel_agent - INFO - Setting entry point and transitions between nodes
+2025-11-06 20:07:11,204 - travel_agent - INFO - State graph build completed successfully \u2705
+2025-11-06 20:07:11,212 - travel_agent - INFO - Graph compiled successfully \u2705
+2025-11-06 20:07:11,212 - travel_agent - INFO - Graph setup completed successfully.
+2025-11-06 20:07:11,212 - travel_agent - INFO - DisplayResultStreamlit initialized with new user message
+2025-11-06 20:07:11,212 - travel_agent - INFO - Displaying results on Streamlit UI
+2025-11-06 20:07:11,214 - travel_agent - INFO - Starting user data extraction process.
+2025-11-06 20:07:11,215 - travel_agent - INFO - Prompting LLM for user detail extraction.
+2025-11-06 20:07:12,880 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:07:12,886 - travel_agent - INFO - Successfully received structured user details from LLM.
+2025-11-06 20:07:12,886 - travel_agent - INFO - User data successfully extracted and parsed.
+2025-11-06 20:07:12,886 - travel_agent - INFO - \u2705 USER DATA EXTRACTION COMPLETED
+2025-11-06 20:07:12,887 - travel_agent - INFO - Fetching attraction details for city: Kolkata
+2025-11-06 20:07:12,888 - travel_agent - INFO - Fetching flight data | Origin: Bangalore, Destination: Kolkata, Departure: 2025-11-23, Return: 2025-11-26, Adults: 4
+2025-11-06 20:07:12,889 - travel_agent - INFO - Fetching hotel data | City: Kolkata, Check-in: 2025-11-23, Check-out: 2025-11-26, Adults: 4, Rooms: 1
+2025-11-06 20:07:12,889 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:07:12,889 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:07:12,890 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:07:12,890 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:07:12,891 - travel_agent - INFO - HotelTools initialized with Amadeus test client
+2025-11-06 20:07:12,891 - travel_agent - INFO - \u2708\ufe0f Initialized Amadeus client successfully (test environment).
+2025-11-06 20:07:12,891 - travel_agent - INFO - Fetching hotels for Kolkata | check-in: 2025-11-23, check-out: 2025-11-26, adults: 4
+2025-11-06 20:07:12,911 - travel_agent - INFO - \u2705 Successfully loaded attractions dataset from combined.csv
+2025-11-06 20:07:12,911 - travel_agent - INFO - Initializing Azure embeddings model...
+2025-11-06 20:07:12,933 - travel_agent - INFO - \u2705 Embeddings model initialized successfully
+2025-11-06 20:07:12,934 - travel_agent - INFO - \U0001f4c1 Existing vector database found, loading from disk.
+2025-11-06 20:07:12,954 - travel_agent - INFO - \U0001f50d Successfully created Chroma retriever.
+2025-11-06 20:07:13,031 - travel_agent - INFO - \u2705 Retrieved 20 hotel results for Kolkata
+2025-11-06 20:07:13,031 - travel_agent - INFO - Retrieved 20 hotels for Kolkata
+2025-11-06 20:07:14,085 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:07:14,088 - travel_agent - INFO - Retrieved attraction details for Kolkata successfully
+2025-11-06 20:07:14,541 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:07:15,238 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:07:15,238 - travel_agent - INFO - \U0001f50d Fetching flights from BAN \u2192 CCU on 2025-11-23 for 4 adult(s).
+2025-11-06 20:07:16,168 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route BAN \u2192 CCU.
+2025-11-06 20:07:16,168 - travel_agent - INFO - Retrieved 0 outbound flight options
+2025-11-06 20:07:16,168 - travel_agent - INFO - \U0001f504 Fetching return flights for Kolkata \u2192 Bangalore on 2025-11-26.
+2025-11-06 20:07:17,004 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:07:17,601 - travel_agent - ERROR - \u274c Amadeus API error while fetching airport code for 'Bangalore': [429]
+Traceback (most recent call last):
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\src\tools\tools_for_flights.py", line 22, in fetch_airport_code
+    response = self.amadeus.reference_data.locations.get(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\amadeus\reference_data\_locations.py", line 39, in get
+    return self.client.get('/v1/reference-data/locations', **params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\amadeus\mixins\http.py", line 40, in get
+    return self.request('GET', path, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\amadeus\mixins\http.py", line 110, in request
+    return self._unauthenticated_request(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\amadeus\mixins\http.py", line 126, in _unauthenticated_request
+    return self.__execute(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\amadeus\mixins\http.py", line 152, in __execute
+    response._detect_error(self)
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\amadeus\mixins\parser.py", line 16, in _detect_error
+    self.__raise_error(error, client)
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\amadeus\mixins\parser.py", line 68, in __raise_error
+    raise error
+amadeus.client.errors.ClientError: [429]
+
+2025-11-06 20:07:17,602 - travel_agent - ERROR - \u274c Invalid airport codes: Kolkata=CCU, Bangalore=None
+2025-11-06 20:07:17,603 - travel_agent - INFO - Retrieved 0 return flight options
+2025-11-06 20:07:17,603 - travel_agent - INFO - Flight data fetched successfully
+2025-11-06 20:07:17,603 - travel_agent - INFO - Starting top attraction recommendations generation
+2025-11-06 20:07:17,604 - travel_agent - INFO - Starting top flight summary generation
+2025-11-06 20:07:17,604 - travel_agent - INFO - Starting top hotel recommendations generation
+2025-11-06 20:07:17,605 - travel_agent - INFO - Structured LLM model prepared for top attraction recommendations
+2025-11-06 20:07:17,607 - travel_agent - INFO - Structured LLM model prepared for flight recommendations
+2025-11-06 20:07:17,608 - travel_agent - INFO - Structured LLM model prepared for hotel recommendations
+2025-11-06 20:07:17,608 - travel_agent - INFO - Invoking LLM for top attractions in Kolkata
+2025-11-06 20:07:17,609 - travel_agent - INFO - Invoking LLM for flight summary | Route: Bangalore \u2192 Kolkata
+2025-11-06 20:07:17,609 - travel_agent - INFO - Invoking LLM for top hotels in Kolkata
+2025-11-06 20:07:18,916 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:07:18,924 - travel_agent - INFO - Successfully generated top flight summary
+2025-11-06 20:07:19,632 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:07:19,637 - travel_agent - INFO - Successfully generated top attraction recommendations for Kolkata
+2025-11-06 20:07:22,023 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:07:22,030 - travel_agent - INFO - Successfully generated top hotel recommendations for Kolkata
+2025-11-06 20:07:22,031 - travel_agent - INFO - Starting itinerary generation process.
+2025-11-06 20:07:22,031 - travel_agent - INFO - Prompt template for itinerary successfully created.
+2025-11-06 20:07:29,636 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:07:29,638 - travel_agent - INFO - Successfully generated itinerary from LLM response.
+2025-11-06 20:07:29,641 - travel_agent - INFO - Generating itinerary PDF...
+2025-11-06 20:07:29,661 - travel_agent - INFO - \u2705 PDF generated successfully
+2025-11-06 20:07:29,662 - travel_agent - INFO - Final itinerary displayed and PDF download enabled
+2025-11-06 20:07:29,662 - travel_agent - INFO - Result displayed successfully on Streamlit UI.
+2025-11-06 20:07:29,663 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:07:29,663 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:07:29,663 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:16:52,550 - travel_agent - INFO - Application started.
+2025-11-06 20:16:52,550 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:16:52,551 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:16:52,551 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:16:52,552 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:16:52,552 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:16:52,553 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:16:52,553 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:16:52,554 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:16:52,554 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:16:52,555 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:16:52,555 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:16:52,555 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:17:01,559 - travel_agent - INFO - Application started.
+2025-11-06 20:17:01,560 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:17:01,560 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:17:01,560 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:17:01,561 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:17:01,561 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:17:01,562 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:17:01,562 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:17:01,563 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:17:01,563 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:17:01,563 - travel_agent - INFO - User input received: Travelling from Bangalore to Kolkata for a cultural trip with my 3 friends from 23-11-2025 to 26-11-2025.
+2025-11-06 20:17:01,564 - travel_agent - INFO - Initializing AzureChatOpenAI LLM model...
+2025-11-06 20:17:01,586 - travel_agent - INFO - \u2705 AzureChatOpenAI model initialized successfully
+2025-11-06 20:17:01,587 - travel_agent - INFO - LLM model loaded successfully.
+2025-11-06 20:17:01,587 - travel_agent - INFO - GraphBuilder initialized with provided LLM model
+2025-11-06 20:17:01,587 - travel_agent - INFO - Setting up state graph for travel planner agent
+2025-11-06 20:17:01,587 - travel_agent - INFO - Building travel planner state graph...
+2025-11-06 20:17:01,587 - travel_agent - INFO - AttractionNodes initialized with LLM instance
+2025-11-06 20:17:01,587 - travel_agent - INFO - HotelNodes initialized with LLM instance
+2025-11-06 20:17:01,587 - travel_agent - INFO - FlightNodes initialized with LLM instance
+2025-11-06 20:17:01,588 - travel_agent - INFO - Initialized UserNodes with provided LLM instance.
+2025-11-06 20:17:01,588 - travel_agent - INFO - Initialized ItineraryNodes with provided LLM instance.
+2025-11-06 20:17:01,588 - travel_agent - INFO - Adding nodes to the state graph
+2025-11-06 20:17:01,588 - travel_agent - INFO - Setting entry point and transitions between nodes
+2025-11-06 20:17:01,588 - travel_agent - INFO - State graph build completed successfully \u2705
+2025-11-06 20:17:01,596 - travel_agent - INFO - Graph compiled successfully \u2705
+2025-11-06 20:17:01,596 - travel_agent - INFO - Graph setup completed successfully.
+2025-11-06 20:17:01,597 - travel_agent - INFO - DisplayResultStreamlit initialized with new user message
+2025-11-06 20:17:01,597 - travel_agent - INFO - Displaying results on Streamlit UI
+2025-11-06 20:17:01,598 - travel_agent - INFO - Starting user data extraction process.
+2025-11-06 20:17:01,600 - travel_agent - INFO - Prompting LLM for user detail extraction.
+2025-11-06 20:17:03,293 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:17:03,298 - travel_agent - INFO - Successfully received structured user details from LLM.
+2025-11-06 20:17:03,298 - travel_agent - INFO - User data successfully extracted and parsed.
+2025-11-06 20:17:03,298 - travel_agent - INFO - \u2705 USER DATA EXTRACTION COMPLETED
+2025-11-06 20:17:03,298 - travel_agent - INFO - Fetching attraction details for city: Kolkata
+2025-11-06 20:17:03,298 - travel_agent - INFO - Fetching flight data | Origin: Bangalore, Destination: Kolkata, Departure: 2025-11-23, Return: 2025-11-26, Adults: 4
+2025-11-06 20:17:03,298 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:17:03,298 - travel_agent - INFO - Fetching hotel data | City: Kolkata, Check-in: 2025-11-23, Check-out: 2025-11-26, Adults: 4, Rooms: 1
+2025-11-06 20:17:03,298 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:17:03,298 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:17:03,298 - travel_agent - INFO - \u2708\ufe0f Initialized Amadeus client successfully (test environment).
+2025-11-06 20:17:03,303 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:17:03,303 - travel_agent - INFO - HotelTools initialized with Amadeus test client
+2025-11-06 20:17:03,303 - travel_agent - INFO - Fetching hotels for Kolkata | check-in: 2025-11-23, check-out: 2025-11-26, adults: 4
+2025-11-06 20:17:03,322 - travel_agent - INFO - \u2705 Successfully loaded attractions dataset from combined.csv
+2025-11-06 20:17:03,323 - travel_agent - INFO - Initializing Azure embeddings model...
+2025-11-06 20:17:03,344 - travel_agent - INFO - \u2705 Embeddings model initialized successfully
+2025-11-06 20:17:03,344 - travel_agent - INFO - \U0001f4c1 Existing vector database found, loading from disk.
+2025-11-06 20:17:03,360 - travel_agent - INFO - \U0001f50d Successfully created Chroma retriever.
+2025-11-06 20:17:03,971 - travel_agent - INFO - \u2705 Retrieved 20 hotel results for Kolkata
+2025-11-06 20:17:03,971 - travel_agent - INFO - Retrieved 20 hotels for Kolkata
+2025-11-06 20:17:04,423 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:17:04,423 - travel_agent - INFO - Retrieved attraction details for Kolkata successfully
+2025-11-06 20:17:05,027 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:17:05,910 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:17:05,910 - travel_agent - INFO - \U0001f50d Fetching flights from BAN \u2192 CCU on 2025-11-23 for 4 adult(s).
+2025-11-06 20:17:06,970 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route BAN \u2192 CCU.
+2025-11-06 20:17:06,970 - travel_agent - INFO - Retrieved 0 outbound flight options
+2025-11-06 20:17:06,970 - travel_agent - INFO - \U0001f504 Fetching return flights for Kolkata \u2192 Bangalore on 2025-11-26.
+2025-11-06 20:17:07,847 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:17:09,171 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:17:09,171 - travel_agent - INFO - \U0001f50d Fetching flights from CCU \u2192 BAN on 2025-11-26 for 4 adult(s).
+2025-11-06 20:17:10,126 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route CCU \u2192 BAN.
+2025-11-06 20:17:10,126 - travel_agent - INFO - Retrieved 0 return flight options
+2025-11-06 20:17:10,126 - travel_agent - INFO - Flight data fetched successfully
+2025-11-06 20:17:10,126 - travel_agent - INFO - Starting top attraction recommendations generation
+2025-11-06 20:17:10,126 - travel_agent - INFO - Starting top flight summary generation
+2025-11-06 20:17:10,126 - travel_agent - INFO - Starting top hotel recommendations generation
+2025-11-06 20:17:10,126 - travel_agent - INFO - Structured LLM model prepared for top attraction recommendations
+2025-11-06 20:17:10,136 - travel_agent - INFO - Structured LLM model prepared for hotel recommendations
+2025-11-06 20:17:10,136 - travel_agent - INFO - Structured LLM model prepared for flight recommendations
+2025-11-06 20:17:10,138 - travel_agent - INFO - Invoking LLM for top attractions in Kolkata
+2025-11-06 20:17:10,138 - travel_agent - INFO - Invoking LLM for top hotels in Kolkata
+2025-11-06 20:17:10,138 - travel_agent - INFO - Invoking LLM for flight summary | Route: Bangalore \u2192 Kolkata
+2025-11-06 20:17:11,419 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:17:11,431 - travel_agent - INFO - Successfully generated top flight summary
+2025-11-06 20:17:12,636 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:17:12,643 - travel_agent - INFO - Successfully generated top attraction recommendations for Kolkata
+2025-11-06 20:17:13,991 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:17:13,995 - travel_agent - INFO - Successfully generated top hotel recommendations for Kolkata
+2025-11-06 20:17:13,995 - travel_agent - INFO - Starting itinerary generation process.
+2025-11-06 20:17:13,995 - travel_agent - INFO - Prompt template for itinerary successfully created.
+2025-11-06 20:17:21,834 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:17:21,834 - travel_agent - INFO - Successfully generated itinerary from LLM response.
+2025-11-06 20:17:21,842 - travel_agent - INFO - Generating itinerary PDF...
+2025-11-06 20:17:21,864 - travel_agent - INFO - \u2705 PDF generated successfully
+2025-11-06 20:17:21,864 - travel_agent - INFO - Final itinerary displayed and PDF download enabled
+2025-11-06 20:17:21,865 - travel_agent - INFO - Result displayed successfully on Streamlit UI.
+2025-11-06 20:17:21,865 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:17:21,866 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:17:21,866 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:17:53,549 - travel_agent - INFO - Application started.
+2025-11-06 20:17:53,549 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:17:53,549 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:17:53,550 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:17:53,550 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:17:53,550 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:17:53,550 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:17:53,551 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:17:53,551 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:17:53,552 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:17:53,552 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:17:53,552 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:17:53,552 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:17:56,044 - travel_agent - INFO - Application started.
+2025-11-06 20:17:56,044 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:17:56,045 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:17:56,045 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:17:56,046 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:17:56,046 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:17:56,046 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:17:56,047 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:17:56,047 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:17:56,047 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:17:56,048 - travel_agent - INFO - User input received: Travelling from Bangalore to Kolkata for a cultural trip with my 3 friends from 23-11-2025 to 26-11-2025.
+2025-11-06 20:17:56,048 - travel_agent - INFO - Initializing AzureChatOpenAI LLM model...
+2025-11-06 20:17:56,071 - travel_agent - INFO - \u2705 AzureChatOpenAI model initialized successfully
+2025-11-06 20:17:56,071 - travel_agent - INFO - LLM model loaded successfully.
+2025-11-06 20:17:56,072 - travel_agent - INFO - GraphBuilder initialized with provided LLM model
+2025-11-06 20:17:56,072 - travel_agent - INFO - Setting up state graph for travel planner agent
+2025-11-06 20:17:56,072 - travel_agent - INFO - Building travel planner state graph...
+2025-11-06 20:17:56,072 - travel_agent - INFO - AttractionNodes initialized with LLM instance
+2025-11-06 20:17:56,072 - travel_agent - INFO - HotelNodes initialized with LLM instance
+2025-11-06 20:17:56,072 - travel_agent - INFO - FlightNodes initialized with LLM instance
+2025-11-06 20:17:56,073 - travel_agent - INFO - Initialized UserNodes with provided LLM instance.
+2025-11-06 20:17:56,073 - travel_agent - INFO - Initialized ItineraryNodes with provided LLM instance.
+2025-11-06 20:17:56,073 - travel_agent - INFO - Adding nodes to the state graph
+2025-11-06 20:17:56,073 - travel_agent - INFO - Setting entry point and transitions between nodes
+2025-11-06 20:17:56,073 - travel_agent - INFO - State graph build completed successfully \u2705
+2025-11-06 20:17:56,082 - travel_agent - INFO - Graph compiled successfully \u2705
+2025-11-06 20:17:56,082 - travel_agent - INFO - Graph setup completed successfully.
+2025-11-06 20:17:56,082 - travel_agent - INFO - DisplayResultStreamlit initialized with new user message
+2025-11-06 20:17:56,082 - travel_agent - INFO - Displaying results on Streamlit UI
+2025-11-06 20:17:56,084 - travel_agent - INFO - Starting user data extraction process.
+2025-11-06 20:17:56,086 - travel_agent - INFO - Prompting LLM for user detail extraction.
+2025-11-06 20:17:57,650 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:17:57,666 - travel_agent - INFO - Successfully received structured user details from LLM.
+2025-11-06 20:17:57,666 - travel_agent - INFO - User data successfully extracted and parsed.
+2025-11-06 20:17:57,666 - travel_agent - INFO - \u2705 USER DATA EXTRACTION COMPLETED
+2025-11-06 20:17:57,666 - travel_agent - INFO - Fetching attraction details for city: Kolkata
+2025-11-06 20:17:57,666 - travel_agent - INFO - Fetching flight data | Origin: Bangalore, Destination: Kolkata, Departure: 2025-11-23, Return: 2025-11-26, Adults: 4
+2025-11-06 20:17:57,666 - travel_agent - INFO - Fetching hotel data | City: Kolkata, Check-in: 2025-11-23, Check-out: 2025-11-26, Adults: 4, Rooms: 1
+2025-11-06 20:17:57,666 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:17:57,666 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:17:57,666 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:17:57,666 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:17:57,666 - travel_agent - INFO - \u2708\ufe0f Initialized Amadeus client successfully (test environment).
+2025-11-06 20:17:57,666 - travel_agent - INFO - HotelTools initialized with Amadeus test client
+2025-11-06 20:17:57,666 - travel_agent - INFO - Fetching hotels for Kolkata | check-in: 2025-11-23, check-out: 2025-11-26, adults: 4
+2025-11-06 20:17:57,688 - travel_agent - INFO - \u2705 Successfully loaded attractions dataset from combined.csv
+2025-11-06 20:17:57,688 - travel_agent - INFO - Initializing Azure embeddings model...
+2025-11-06 20:17:57,711 - travel_agent - INFO - \u2705 Embeddings model initialized successfully
+2025-11-06 20:17:57,711 - travel_agent - INFO - \U0001f4c1 Existing vector database found, loading from disk.
+2025-11-06 20:17:57,727 - travel_agent - INFO - \U0001f50d Successfully created Chroma retriever.
+2025-11-06 20:17:57,738 - travel_agent - INFO - \u2705 Retrieved 20 hotel results for Kolkata
+2025-11-06 20:17:57,739 - travel_agent - INFO - Retrieved 20 hotels for Kolkata
+2025-11-06 20:17:58,651 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:17:58,666 - travel_agent - INFO - Retrieved attraction details for Kolkata successfully
+2025-11-06 20:17:59,659 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:18:00,661 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:18:00,661 - travel_agent - INFO - \U0001f50d Fetching flights from BAN \u2192 CCU on 2025-11-23 for 4 adult(s).
+2025-11-06 20:18:01,760 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route BAN \u2192 CCU.
+2025-11-06 20:18:01,760 - travel_agent - INFO - Retrieved 0 outbound flight options
+2025-11-06 20:18:01,760 - travel_agent - INFO - \U0001f504 Fetching return flights for Kolkata \u2192 Bangalore on 2025-11-26.
+2025-11-06 20:18:02,610 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:18:03,441 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:18:03,441 - travel_agent - INFO - \U0001f50d Fetching flights from CCU \u2192 BAN on 2025-11-26 for 4 adult(s).
+2025-11-06 20:18:04,444 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route CCU \u2192 BAN.
+2025-11-06 20:18:04,444 - travel_agent - INFO - Retrieved 0 return flight options
+2025-11-06 20:18:04,444 - travel_agent - INFO - Flight data fetched successfully
+2025-11-06 20:18:04,444 - travel_agent - INFO - Starting top attraction recommendations generation
+2025-11-06 20:18:04,444 - travel_agent - INFO - Starting top flight summary generation
+2025-11-06 20:18:04,444 - travel_agent - INFO - Starting top hotel recommendations generation
+2025-11-06 20:18:04,444 - travel_agent - INFO - Structured LLM model prepared for top attraction recommendations
+2025-11-06 20:18:04,460 - travel_agent - INFO - Structured LLM model prepared for hotel recommendations
+2025-11-06 20:18:04,462 - travel_agent - INFO - Structured LLM model prepared for flight recommendations
+2025-11-06 20:18:04,462 - travel_agent - INFO - Invoking LLM for top attractions in Kolkata
+2025-11-06 20:18:04,462 - travel_agent - INFO - Invoking LLM for top hotels in Kolkata
+2025-11-06 20:18:04,462 - travel_agent - INFO - Invoking LLM for flight summary | Route: Bangalore \u2192 Kolkata
+2025-11-06 20:18:05,821 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:18:05,837 - travel_agent - INFO - Successfully generated top flight summary
+2025-11-06 20:18:06,886 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:18:06,893 - travel_agent - INFO - Successfully generated top attraction recommendations for Kolkata
+2025-11-06 20:18:07,693 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:18:07,693 - travel_agent - INFO - Successfully generated top hotel recommendations for Kolkata
+2025-11-06 20:18:07,693 - travel_agent - INFO - Starting itinerary generation process.
+2025-11-06 20:18:07,693 - travel_agent - INFO - Prompt template for itinerary successfully created.
+2025-11-06 20:18:16,796 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:18:16,799 - travel_agent - INFO - Successfully generated itinerary from LLM response.
+2025-11-06 20:18:16,801 - travel_agent - INFO - Generating itinerary PDF...
+2025-11-06 20:18:16,820 - travel_agent - INFO - \u2705 PDF generated successfully
+2025-11-06 20:18:16,820 - travel_agent - INFO - Final itinerary displayed and PDF download enabled
+2025-11-06 20:18:16,820 - travel_agent - INFO - Result displayed successfully on Streamlit UI.
+2025-11-06 20:18:16,820 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:18:16,820 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:18:16,820 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:18:43,341 - travel_agent - INFO - Application started.
+2025-11-06 20:18:43,342 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:18:43,343 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:18:43,343 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:18:43,343 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:18:43,343 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:18:43,343 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:18:43,344 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:18:43,344 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:18:43,344 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:18:43,345 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:18:43,345 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:18:43,345 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:23:36,934 - travel_agent - INFO - Application started.
+2025-11-06 20:23:36,935 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:23:36,935 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:23:36,935 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:23:36,935 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:23:36,935 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:23:36,936 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:23:36,936 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:23:36,937 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:23:36,937 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:23:36,937 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:23:36,937 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:23:36,938 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:23:49,804 - travel_agent - INFO - Application started.
+2025-11-06 20:23:49,804 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:23:49,804 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:23:49,804 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:23:49,804 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:23:49,804 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:23:49,804 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:23:49,804 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:23:49,804 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:23:49,804 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:23:49,807 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:23:49,807 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:23:49,807 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:23:54,026 - travel_agent - INFO - Application started.
+2025-11-06 20:23:54,026 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:23:54,026 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:23:54,026 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:23:54,026 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:23:54,026 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:23:54,028 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:23:54,028 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:23:54,028 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:23:54,028 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:23:54,028 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:23:54,028 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:23:54,028 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:25:04,120 - travel_agent - INFO - Application started.
+2025-11-06 20:25:04,120 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:25:04,122 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:25:04,122 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:25:04,122 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:25:04,123 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:25:04,123 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:25:04,124 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:25:04,125 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:25:04,125 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:25:04,126 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:25:04,126 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:25:04,126 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:25:05,335 - travel_agent - INFO - Application started.
+2025-11-06 20:25:05,335 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:25:05,335 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:25:05,335 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:25:05,335 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:25:05,335 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:25:05,335 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:25:05,335 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:25:05,335 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:25:05,341 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:25:05,341 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:25:05,342 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:25:05,342 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:25:16,823 - travel_agent - INFO - Application started.
+2025-11-06 20:25:16,824 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:25:16,826 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:25:16,826 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:25:16,826 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:25:16,826 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:25:16,827 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:25:16,828 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:25:16,828 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:25:16,828 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:25:16,829 - travel_agent - INFO - User input received: Travelling from Bangalore to Kolkata for a cultural trip with my 3 friends from 23-11-2025 to 26-11-2025.
+2025-11-06 20:25:16,829 - travel_agent - INFO - Initializing AzureChatOpenAI LLM model...
+2025-11-06 20:25:16,872 - travel_agent - INFO - \u2705 AzureChatOpenAI model initialized successfully
+2025-11-06 20:25:16,873 - travel_agent - INFO - LLM model loaded successfully.
+2025-11-06 20:25:16,873 - travel_agent - INFO - GraphBuilder initialized with provided LLM model
+2025-11-06 20:25:16,873 - travel_agent - INFO - Setting up state graph for travel planner agent
+2025-11-06 20:25:16,874 - travel_agent - INFO - Building travel planner state graph...
+2025-11-06 20:25:16,874 - travel_agent - INFO - AttractionNodes initialized with LLM instance
+2025-11-06 20:25:16,874 - travel_agent - INFO - HotelNodes initialized with LLM instance
+2025-11-06 20:25:16,875 - travel_agent - INFO - FlightNodes initialized with LLM instance
+2025-11-06 20:25:16,875 - travel_agent - INFO - Initialized UserNodes with provided LLM instance.
+2025-11-06 20:25:16,875 - travel_agent - INFO - Initialized ItineraryNodes with provided LLM instance.
+2025-11-06 20:25:16,875 - travel_agent - INFO - Adding nodes to the state graph
+2025-11-06 20:25:16,876 - travel_agent - INFO - Setting entry point and transitions between nodes
+2025-11-06 20:25:16,877 - travel_agent - INFO - State graph build completed successfully \u2705
+2025-11-06 20:25:16,893 - travel_agent - INFO - Graph compiled successfully \u2705
+2025-11-06 20:25:16,893 - travel_agent - INFO - Graph setup completed successfully.
+2025-11-06 20:25:16,893 - travel_agent - INFO - DisplayResultStreamlit initialized with new user message
+2025-11-06 20:25:16,893 - travel_agent - INFO - Displaying results on Streamlit UI
+2025-11-06 20:25:16,896 - travel_agent - INFO - Starting user data extraction process.
+2025-11-06 20:25:16,898 - travel_agent - INFO - Prompting LLM for user detail extraction.
+2025-11-06 20:25:18,579 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:25:18,592 - travel_agent - INFO - Successfully received structured user details from LLM.
+2025-11-06 20:25:18,593 - travel_agent - INFO - User data successfully extracted and parsed.
+2025-11-06 20:25:18,593 - travel_agent - INFO - \u2705 USER DATA EXTRACTION COMPLETED
+2025-11-06 20:25:18,595 - travel_agent - INFO - Fetching attraction details for city: Kolkata
+2025-11-06 20:25:18,596 - travel_agent - INFO - Fetching flight data | Origin: Bangalore, Destination: Kolkata, Departure: 2025-11-23, Return: 2025-11-26, Adults: 4
+2025-11-06 20:25:18,596 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:25:18,596 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:25:18,596 - travel_agent - INFO - Fetching hotel data | City: Kolkata, Check-in: 2025-11-23, Check-out: 2025-11-26, Adults: 4, Rooms: 1
+2025-11-06 20:25:18,596 - travel_agent - INFO - \u2708\ufe0f Initialized Amadeus client successfully (test environment).
+2025-11-06 20:25:18,598 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:25:18,598 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:25:18,613 - travel_agent - INFO - HotelTools initialized with Amadeus test client
+2025-11-06 20:25:18,613 - travel_agent - INFO - Fetching hotels for Kolkata | check-in: 2025-11-23, check-out: 2025-11-26, adults: 4
+2025-11-06 20:25:18,630 - travel_agent - INFO - \u2705 Successfully loaded attractions dataset from combined.csv
+2025-11-06 20:25:18,630 - travel_agent - INFO - Initializing Azure embeddings model...
+2025-11-06 20:25:18,669 - travel_agent - INFO - \u2705 Embeddings model initialized successfully
+2025-11-06 20:25:18,670 - travel_agent - INFO - \U0001f4c1 Existing vector database found, loading from disk.
+2025-11-06 20:25:18,698 - travel_agent - INFO - \U0001f50d Successfully created Chroma retriever.
+2025-11-06 20:25:18,851 - travel_agent - INFO - \u2705 Retrieved 20 hotel results for Kolkata
+2025-11-06 20:25:18,851 - travel_agent - INFO - Retrieved 20 hotels for Kolkata
+2025-11-06 20:25:19,744 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:25:19,748 - travel_agent - INFO - Retrieved attraction details for Kolkata successfully
+2025-11-06 20:25:20,304 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:25:21,304 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:25:21,304 - travel_agent - INFO - \U0001f50d Fetching flights from BAN \u2192 CCU on 2025-11-23 for 4 adult(s).
+2025-11-06 20:25:22,284 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route BAN \u2192 CCU.
+2025-11-06 20:25:22,284 - travel_agent - INFO - Retrieved 0 outbound flight options
+2025-11-06 20:25:22,284 - travel_agent - INFO - \U0001f504 Fetching return flights for Kolkata \u2192 Bangalore on 2025-11-26.
+2025-11-06 20:25:23,193 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:25:24,061 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:25:24,062 - travel_agent - INFO - \U0001f50d Fetching flights from CCU \u2192 BAN on 2025-11-26 for 4 adult(s).
+2025-11-06 20:25:25,171 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route CCU \u2192 BAN.
+2025-11-06 20:25:25,172 - travel_agent - INFO - Retrieved 0 return flight options
+2025-11-06 20:25:25,172 - travel_agent - INFO - Flight data fetched successfully
+2025-11-06 20:25:25,172 - travel_agent - INFO - Starting top attraction recommendations generation
+2025-11-06 20:25:25,172 - travel_agent - INFO - Starting top flight summary generation
+2025-11-06 20:25:25,172 - travel_agent - INFO - Starting top hotel recommendations generation
+2025-11-06 20:25:25,172 - travel_agent - INFO - Structured LLM model prepared for top attraction recommendations
+2025-11-06 20:25:25,172 - travel_agent - INFO - Structured LLM model prepared for flight recommendations
+2025-11-06 20:25:25,178 - travel_agent - INFO - Structured LLM model prepared for hotel recommendations
+2025-11-06 20:25:25,178 - travel_agent - INFO - Invoking LLM for top attractions in Kolkata
+2025-11-06 20:25:25,178 - travel_agent - INFO - Invoking LLM for flight summary | Route: Bangalore \u2192 Kolkata
+2025-11-06 20:25:25,178 - travel_agent - INFO - Invoking LLM for top hotels in Kolkata
+2025-11-06 20:25:26,496 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:25:26,505 - travel_agent - INFO - Successfully generated top flight summary
+2025-11-06 20:25:27,544 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:25:27,550 - travel_agent - INFO - Successfully generated top attraction recommendations for Kolkata
+2025-11-06 20:25:28,559 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:25:28,566 - travel_agent - INFO - Successfully generated top hotel recommendations for Kolkata
+2025-11-06 20:25:28,572 - travel_agent - INFO - Starting itinerary generation process.
+2025-11-06 20:25:28,572 - travel_agent - INFO - Prompt template for itinerary successfully created.
+2025-11-06 20:25:36,874 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:25:36,874 - travel_agent - INFO - Successfully generated itinerary from LLM response.
+2025-11-06 20:25:36,889 - travel_agent - INFO - Generating itinerary PDF...
+2025-11-06 20:25:36,912 - travel_agent - INFO - \u2705 PDF generated successfully
+2025-11-06 20:25:36,912 - travel_agent - INFO - Final itinerary displayed and PDF download enabled
+2025-11-06 20:25:36,913 - travel_agent - INFO - Result displayed successfully on Streamlit UI.
+2025-11-06 20:25:36,913 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:25:36,913 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:25:36,913 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:28:06,871 - travel_agent - INFO - Application started.
+2025-11-06 20:28:06,871 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:28:06,871 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:28:06,871 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:28:06,871 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:28:06,871 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:28:06,871 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:28:06,871 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:28:06,871 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:28:06,871 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:28:06,871 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:28:06,871 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:28:06,880 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:28:09,898 - travel_agent - INFO - Application started.
+2025-11-06 20:28:09,898 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:28:09,899 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:28:09,899 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:28:09,899 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:28:09,899 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:28:09,900 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:28:09,900 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:28:09,900 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:28:09,900 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:28:09,901 - travel_agent - INFO - User input received: Travelling from Bangalore to Kolkata for a cultural trip with my 3 friends from 23-11-2025 to 26-11-2025.
+2025-11-06 20:28:09,901 - travel_agent - INFO - Initializing AzureChatOpenAI LLM model...
+2025-11-06 20:28:09,925 - travel_agent - INFO - \u2705 AzureChatOpenAI model initialized successfully
+2025-11-06 20:28:09,925 - travel_agent - INFO - LLM model loaded successfully.
+2025-11-06 20:28:09,925 - travel_agent - INFO - GraphBuilder initialized with provided LLM model
+2025-11-06 20:28:09,926 - travel_agent - INFO - Setting up state graph for travel planner agent
+2025-11-06 20:28:09,926 - travel_agent - INFO - Building travel planner state graph...
+2025-11-06 20:28:09,926 - travel_agent - INFO - AttractionNodes initialized with LLM instance
+2025-11-06 20:28:09,926 - travel_agent - INFO - HotelNodes initialized with LLM instance
+2025-11-06 20:28:09,926 - travel_agent - INFO - FlightNodes initialized with LLM instance
+2025-11-06 20:28:09,926 - travel_agent - INFO - Initialized UserNodes with provided LLM instance.
+2025-11-06 20:28:09,926 - travel_agent - INFO - Initialized ItineraryNodes with provided LLM instance.
+2025-11-06 20:28:09,926 - travel_agent - INFO - Adding nodes to the state graph
+2025-11-06 20:28:09,926 - travel_agent - INFO - Setting entry point and transitions between nodes
+2025-11-06 20:28:09,927 - travel_agent - INFO - State graph build completed successfully \u2705
+2025-11-06 20:28:09,935 - travel_agent - INFO - Graph compiled successfully \u2705
+2025-11-06 20:28:09,935 - travel_agent - INFO - Graph setup completed successfully.
+2025-11-06 20:28:09,935 - travel_agent - INFO - DisplayResultStreamlit initialized with new user message
+2025-11-06 20:28:09,936 - travel_agent - INFO - Displaying results on Streamlit UI
+2025-11-06 20:28:09,938 - travel_agent - INFO - Starting user data extraction process.
+2025-11-06 20:28:09,939 - travel_agent - INFO - Prompting LLM for user detail extraction.
+2025-11-06 20:28:11,572 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:28:11,578 - travel_agent - INFO - Successfully received structured user details from LLM.
+2025-11-06 20:28:11,578 - travel_agent - INFO - User data successfully extracted and parsed.
+2025-11-06 20:28:11,578 - travel_agent - INFO - \u2705 USER DATA EXTRACTION COMPLETED
+2025-11-06 20:28:11,578 - travel_agent - INFO - Fetching attraction details for city: Kolkata
+2025-11-06 20:28:11,584 - travel_agent - INFO - Fetching flight data | Origin: Bangalore, Destination: Kolkata, Departure: 2025-11-23, Return: 2025-11-26, Adults: 4
+2025-11-06 20:28:11,584 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:28:11,584 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:28:11,584 - travel_agent - INFO - \u2708\ufe0f Initialized Amadeus client successfully (test environment).
+2025-11-06 20:28:11,584 - travel_agent - INFO - Fetching hotel data | City: Kolkata, Check-in: 2025-11-23, Check-out: 2025-11-26, Adults: 4, Rooms: 1
+2025-11-06 20:28:11,586 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:28:11,586 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:28:11,593 - travel_agent - INFO - HotelTools initialized with Amadeus test client
+2025-11-06 20:28:11,593 - travel_agent - INFO - Fetching hotels for Kolkata | check-in: 2025-11-23, check-out: 2025-11-26, adults: 4
+2025-11-06 20:28:11,604 - travel_agent - INFO - \u2705 Successfully loaded attractions dataset from combined.csv
+2025-11-06 20:28:11,605 - travel_agent - INFO - Initializing Azure embeddings model...
+2025-11-06 20:28:11,627 - travel_agent - INFO - \u2705 Embeddings model initialized successfully
+2025-11-06 20:28:11,628 - travel_agent - INFO - \U0001f4c1 Existing vector database found, loading from disk.
+2025-11-06 20:28:11,643 - travel_agent - INFO - \U0001f50d Successfully created Chroma retriever.
+2025-11-06 20:28:11,681 - travel_agent - INFO - \u2705 Retrieved 20 hotel results for Kolkata
+2025-11-06 20:28:11,681 - travel_agent - INFO - Retrieved 20 hotels for Kolkata
+2025-11-06 20:28:12,593 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:28:12,601 - travel_agent - INFO - Retrieved attraction details for Kolkata successfully
+2025-11-06 20:28:13,124 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:28:14,043 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:28:14,043 - travel_agent - INFO - \U0001f50d Fetching flights from BAN \u2192 CCU on 2025-11-23 for 4 adult(s).
+2025-11-06 20:28:15,115 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route BAN \u2192 CCU.
+2025-11-06 20:28:15,115 - travel_agent - INFO - Retrieved 0 outbound flight options
+2025-11-06 20:28:15,115 - travel_agent - INFO - \U0001f504 Fetching return flights for Kolkata \u2192 Bangalore on 2025-11-26.
+2025-11-06 20:28:15,946 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:28:16,802 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:28:16,802 - travel_agent - INFO - \U0001f50d Fetching flights from CCU \u2192 BAN on 2025-11-26 for 4 adult(s).
+2025-11-06 20:28:17,792 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route CCU \u2192 BAN.
+2025-11-06 20:28:17,793 - travel_agent - INFO - Retrieved 0 return flight options
+2025-11-06 20:28:17,793 - travel_agent - INFO - Flight data fetched successfully
+2025-11-06 20:28:17,793 - travel_agent - INFO - Starting top attraction recommendations generation
+2025-11-06 20:28:17,793 - travel_agent - INFO - Starting top flight summary generation
+2025-11-06 20:28:17,793 - travel_agent - INFO - Starting top hotel recommendations generation
+2025-11-06 20:28:17,797 - travel_agent - INFO - Structured LLM model prepared for top attraction recommendations
+2025-11-06 20:28:17,800 - travel_agent - INFO - Structured LLM model prepared for flight recommendations
+2025-11-06 20:28:17,802 - travel_agent - INFO - Structured LLM model prepared for hotel recommendations
+2025-11-06 20:28:17,802 - travel_agent - INFO - Invoking LLM for top attractions in Kolkata
+2025-11-06 20:28:17,803 - travel_agent - INFO - Invoking LLM for flight summary | Route: Bangalore \u2192 Kolkata
+2025-11-06 20:28:17,803 - travel_agent - INFO - Invoking LLM for top hotels in Kolkata
+2025-11-06 20:28:19,096 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:28:19,112 - travel_agent - INFO - Successfully generated top flight summary
+2025-11-06 20:28:20,170 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:28:20,178 - travel_agent - INFO - Successfully generated top attraction recommendations for Kolkata
+2025-11-06 20:28:21,557 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:28:21,568 - travel_agent - INFO - Successfully generated top hotel recommendations for Kolkata
+2025-11-06 20:28:21,568 - travel_agent - INFO - Starting itinerary generation process.
+2025-11-06 20:28:21,568 - travel_agent - INFO - Prompt template for itinerary successfully created.
+2025-11-06 20:28:29,637 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:28:29,638 - travel_agent - INFO - Successfully generated itinerary from LLM response.
+2025-11-06 20:28:29,642 - travel_agent - INFO - Generating itinerary PDF...
+2025-11-06 20:28:29,657 - travel_agent - INFO - \u2705 PDF generated successfully
+2025-11-06 20:28:29,657 - travel_agent - INFO - Final itinerary displayed and PDF download enabled
+2025-11-06 20:28:29,657 - travel_agent - INFO - Result displayed successfully on Streamlit UI.
+2025-11-06 20:28:29,666 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:28:29,666 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:28:29,667 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:30:44,786 - travel_agent - INFO - Application started.
+2025-11-06 20:30:44,787 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:30:44,787 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:30:44,787 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:30:44,787 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:30:44,787 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:30:44,788 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:30:44,788 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:30:44,788 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:30:44,789 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:30:44,789 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:30:44,789 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:30:44,789 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:30:45,194 - travel_agent - INFO - Application started.
+2025-11-06 20:30:45,194 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:30:45,194 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:30:45,194 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:30:45,194 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:30:45,194 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:30:45,199 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:30:45,200 - travel_agent - INFO - Application started.
+2025-11-06 20:30:45,267 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:30:45,267 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:30:45,267 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:30:45,267 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:30:45,267 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:30:45,267 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:30:45,267 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:30:45,267 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:30:45,267 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:30:45,267 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:30:45,267 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:30:45,267 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:30:54,272 - travel_agent - INFO - Application started.
+2025-11-06 20:30:54,273 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:30:54,274 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:30:54,274 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:30:54,275 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:30:54,275 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:30:54,275 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:30:54,276 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:30:54,276 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:30:54,276 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:30:54,277 - travel_agent - INFO - User input received: Travelling from Bangalore to Kolkata for a cultural trip with my 3 friends from 23-11-2025 to 26-11-2025.
+2025-11-06 20:30:54,278 - travel_agent - INFO - Initializing AzureChatOpenAI LLM model...
+2025-11-06 20:30:54,315 - travel_agent - INFO - \u2705 AzureChatOpenAI model initialized successfully
+2025-11-06 20:30:54,316 - travel_agent - INFO - LLM model loaded successfully.
+2025-11-06 20:30:54,316 - travel_agent - INFO - GraphBuilder initialized with provided LLM model
+2025-11-06 20:30:54,316 - travel_agent - INFO - Setting up state graph for travel planner agent
+2025-11-06 20:30:54,317 - travel_agent - INFO - Building travel planner state graph...
+2025-11-06 20:30:54,317 - travel_agent - INFO - AttractionNodes initialized with LLM instance
+2025-11-06 20:30:54,317 - travel_agent - INFO - HotelNodes initialized with LLM instance
+2025-11-06 20:30:54,317 - travel_agent - INFO - FlightNodes initialized with LLM instance
+2025-11-06 20:30:54,318 - travel_agent - INFO - Initialized UserNodes with provided LLM instance.
+2025-11-06 20:30:54,318 - travel_agent - INFO - Initialized ItineraryNodes with provided LLM instance.
+2025-11-06 20:30:54,318 - travel_agent - INFO - Adding nodes to the state graph
+2025-11-06 20:30:54,319 - travel_agent - INFO - Setting entry point and transitions between nodes
+2025-11-06 20:30:54,320 - travel_agent - INFO - State graph build completed successfully \u2705
+2025-11-06 20:30:54,332 - travel_agent - INFO - Graph compiled successfully \u2705
+2025-11-06 20:30:54,332 - travel_agent - INFO - Graph setup completed successfully.
+2025-11-06 20:30:54,333 - travel_agent - INFO - DisplayResultStreamlit initialized with new user message
+2025-11-06 20:30:54,333 - travel_agent - INFO - Displaying results on Streamlit UI
+2025-11-06 20:30:54,336 - travel_agent - INFO - Starting user data extraction process.
+2025-11-06 20:30:54,337 - travel_agent - INFO - Prompting LLM for user detail extraction.
+2025-11-06 20:30:55,955 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:30:55,955 - travel_agent - INFO - Successfully received structured user details from LLM.
+2025-11-06 20:30:55,955 - travel_agent - INFO - User data successfully extracted and parsed.
+2025-11-06 20:30:55,955 - travel_agent - INFO - \u2705 USER DATA EXTRACTION COMPLETED
+2025-11-06 20:30:55,955 - travel_agent - INFO - Fetching attraction details for city: Kolkata
+2025-11-06 20:30:55,970 - travel_agent - INFO - Fetching flight data | Origin: Bangalore, Destination: Kolkata, Departure: 2025-11-23, Return: 2025-11-26, Adults: 4
+2025-11-06 20:30:55,970 - travel_agent - INFO - Fetching hotel data | City: Kolkata, Check-in: 2025-11-23, Check-out: 2025-11-26, Adults: 4, Rooms: 1
+2025-11-06 20:30:55,970 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:30:55,970 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:30:55,970 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:30:55,970 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:30:55,970 - travel_agent - INFO - \u2708\ufe0f Initialized Amadeus client successfully (test environment).
+2025-11-06 20:30:55,970 - travel_agent - INFO - HotelTools initialized with Amadeus test client
+2025-11-06 20:30:55,970 - travel_agent - INFO - Fetching hotels for Kolkata | check-in: 2025-11-23, check-out: 2025-11-26, adults: 4
+2025-11-06 20:30:56,012 - travel_agent - INFO - \u2705 Successfully loaded attractions dataset from combined.csv
+2025-11-06 20:30:56,013 - travel_agent - INFO - Initializing Azure embeddings model...
+2025-11-06 20:30:56,046 - travel_agent - INFO - \u2705 Embeddings model initialized successfully
+2025-11-06 20:30:56,046 - travel_agent - INFO - \U0001f4c1 Existing vector database found, loading from disk.
+2025-11-06 20:30:56,075 - travel_agent - INFO - \U0001f50d Successfully created Chroma retriever.
+2025-11-06 20:30:56,112 - travel_agent - INFO - \u2705 Retrieved 20 hotel results for Kolkata
+2025-11-06 20:30:56,112 - travel_agent - INFO - Retrieved 20 hotels for Kolkata
+2025-11-06 20:30:57,122 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:30:57,126 - travel_agent - INFO - Retrieved attraction details for Kolkata successfully
+2025-11-06 20:30:57,543 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:30:58,427 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:30:58,429 - travel_agent - INFO - \U0001f50d Fetching flights from BAN \u2192 CCU on 2025-11-23 for 4 adult(s).
+2025-11-06 20:30:59,493 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route BAN \u2192 CCU.
+2025-11-06 20:30:59,493 - travel_agent - INFO - Retrieved 0 outbound flight options
+2025-11-06 20:30:59,493 - travel_agent - INFO - \U0001f504 Fetching return flights for Kolkata \u2192 Bangalore on 2025-11-26.
+2025-11-06 20:31:00,367 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:31:01,226 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:31:01,227 - travel_agent - INFO - \U0001f50d Fetching flights from CCU \u2192 BAN on 2025-11-26 for 4 adult(s).
+2025-11-06 20:31:02,380 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route CCU \u2192 BAN.
+2025-11-06 20:31:02,380 - travel_agent - INFO - Retrieved 0 return flight options
+2025-11-06 20:31:02,380 - travel_agent - INFO - Flight data fetched successfully
+2025-11-06 20:31:02,381 - travel_agent - INFO - Starting top attraction recommendations generation
+2025-11-06 20:31:02,381 - travel_agent - INFO - Starting top flight summary generation
+2025-11-06 20:31:02,381 - travel_agent - INFO - Starting top hotel recommendations generation
+2025-11-06 20:31:02,382 - travel_agent - INFO - Structured LLM model prepared for top attraction recommendations
+2025-11-06 20:31:02,384 - travel_agent - INFO - Structured LLM model prepared for flight recommendations
+2025-11-06 20:31:02,386 - travel_agent - INFO - Structured LLM model prepared for hotel recommendations
+2025-11-06 20:31:02,386 - travel_agent - INFO - Invoking LLM for top attractions in Kolkata
+2025-11-06 20:31:02,386 - travel_agent - INFO - Invoking LLM for flight summary | Route: Bangalore \u2192 Kolkata
+2025-11-06 20:31:02,386 - travel_agent - INFO - Invoking LLM for top hotels in Kolkata
+2025-11-06 20:31:03,770 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:31:03,792 - travel_agent - INFO - Successfully generated top flight summary
+2025-11-06 20:31:04,906 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:31:04,922 - travel_agent - INFO - Successfully generated top attraction recommendations for Kolkata
+2025-11-06 20:31:05,966 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:31:05,972 - travel_agent - INFO - Successfully generated top hotel recommendations for Kolkata
+2025-11-06 20:31:05,972 - travel_agent - INFO - Starting itinerary generation process.
+2025-11-06 20:31:05,972 - travel_agent - INFO - Prompt template for itinerary successfully created.
+2025-11-06 20:31:13,938 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:31:13,938 - travel_agent - INFO - Successfully generated itinerary from LLM response.
+2025-11-06 20:31:13,943 - travel_agent - INFO - Generating itinerary PDF...
+2025-11-06 20:31:13,969 - travel_agent - INFO - \u2705 PDF generated successfully
+2025-11-06 20:31:13,970 - travel_agent - INFO - Final itinerary displayed and PDF download enabled
+2025-11-06 20:31:13,970 - travel_agent - INFO - Result displayed successfully on Streamlit UI.
+2025-11-06 20:31:13,971 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:31:13,971 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:31:13,971 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:35:09,699 - travel_agent - INFO - Application started.
+2025-11-06 20:35:09,699 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:35:09,699 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:35:09,699 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:35:09,699 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:35:09,699 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:35:09,699 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:35:09,699 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:35:09,699 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:35:09,699 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:35:09,699 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:35:09,705 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:35:09,705 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:35:12,059 - travel_agent - INFO - Application started.
+2025-11-06 20:35:12,059 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:35:12,067 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:35:12,068 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:35:12,068 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:35:12,068 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:35:12,068 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:35:12,069 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:35:12,069 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:35:12,070 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:35:12,070 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:35:12,070 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:35:12,070 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:35:36,245 - travel_agent - INFO - Application started.
+2025-11-06 20:35:36,245 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:35:36,245 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:35:36,245 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:35:36,245 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:35:36,245 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:35:36,245 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:35:36,245 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:35:36,245 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:35:36,245 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:35:36,245 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:35:36,245 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:35:36,245 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:35:37,860 - travel_agent - INFO - Application started.
+2025-11-06 20:35:37,860 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:35:37,860 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:35:37,860 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:35:37,860 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:35:37,860 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:35:37,860 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:35:37,860 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:35:37,860 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:35:37,860 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:35:37,860 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:35:37,860 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:35:37,860 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:37:01,349 - travel_agent - INFO - Application started.
+2025-11-06 20:37:01,349 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:37:01,349 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:37:01,349 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:37:01,349 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:37:01,349 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:37:01,349 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:37:01,349 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:37:01,349 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:37:01,349 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:37:01,349 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:37:01,349 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:37:01,349 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:37:02,163 - travel_agent - INFO - Application started.
+2025-11-06 20:37:02,163 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:37:02,163 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:37:02,163 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:37:02,163 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:37:02,163 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:37:02,163 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:37:02,163 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:37:02,166 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:37:02,166 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:37:02,167 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:37:02,167 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:37:02,167 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:37:02,233 - travel_agent - INFO - Application started.
+2025-11-06 20:37:02,241 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:37:02,242 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:37:02,242 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:37:02,242 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:37:02,242 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:37:02,242 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:37:02,243 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:37:02,243 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:37:02,243 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:37:02,243 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:37:02,244 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:37:02,244 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:37:19,409 - travel_agent - INFO - Application started.
+2025-11-06 20:37:19,409 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:37:19,409 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:37:19,409 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:37:19,409 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:37:19,409 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:37:19,409 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:37:19,409 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:37:19,409 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:37:19,409 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:37:19,415 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:37:19,415 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:37:19,415 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:37:55,695 - travel_agent - INFO - Application started.
+2025-11-06 20:37:55,696 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:37:55,697 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:37:55,697 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:37:55,697 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:37:55,697 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:37:55,697 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:37:55,697 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:37:55,697 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:37:55,700 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:37:55,700 - travel_agent - INFO - User input received: Travelling from Bangalore to Kolkata for a cultural trip with my 3 friends from 23-11-2025 to 26-11-2025.
+2025-11-06 20:37:55,701 - travel_agent - INFO - Initializing AzureChatOpenAI LLM model...
+2025-11-06 20:37:55,737 - travel_agent - INFO - \u2705 AzureChatOpenAI model initialized successfully
+2025-11-06 20:37:55,737 - travel_agent - INFO - LLM model loaded successfully.
+2025-11-06 20:37:55,738 - travel_agent - INFO - GraphBuilder initialized with provided LLM model
+2025-11-06 20:37:55,738 - travel_agent - INFO - Setting up state graph for travel planner agent
+2025-11-06 20:37:55,738 - travel_agent - INFO - Building travel planner state graph...
+2025-11-06 20:37:55,738 - travel_agent - INFO - AttractionNodes initialized with LLM instance
+2025-11-06 20:37:55,738 - travel_agent - INFO - HotelNodes initialized with LLM instance
+2025-11-06 20:37:55,738 - travel_agent - INFO - FlightNodes initialized with LLM instance
+2025-11-06 20:37:55,738 - travel_agent - INFO - Initialized UserNodes with provided LLM instance.
+2025-11-06 20:37:55,739 - travel_agent - INFO - Initialized ItineraryNodes with provided LLM instance.
+2025-11-06 20:37:55,739 - travel_agent - INFO - Adding nodes to the state graph
+2025-11-06 20:37:55,740 - travel_agent - INFO - Setting entry point and transitions between nodes
+2025-11-06 20:37:55,740 - travel_agent - INFO - State graph build completed successfully \u2705
+2025-11-06 20:37:55,752 - travel_agent - INFO - Graph compiled successfully \u2705
+2025-11-06 20:37:55,753 - travel_agent - INFO - Graph setup completed successfully.
+2025-11-06 20:37:55,753 - travel_agent - INFO - DisplayResultStreamlit initialized with new user message
+2025-11-06 20:37:55,753 - travel_agent - INFO - Displaying results on Streamlit UI
+2025-11-06 20:37:55,756 - travel_agent - INFO - Starting user data extraction process.
+2025-11-06 20:37:55,756 - travel_agent - INFO - Prompting LLM for user detail extraction.
+2025-11-06 20:37:57,413 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:37:57,435 - travel_agent - INFO - Successfully received structured user details from LLM.
+2025-11-06 20:37:57,435 - travel_agent - INFO - User data successfully extracted and parsed.
+2025-11-06 20:37:57,436 - travel_agent - INFO - \u2705 USER DATA EXTRACTION COMPLETED
+2025-11-06 20:37:57,437 - travel_agent - INFO - Fetching attraction details for city: Kolkata
+2025-11-06 20:37:57,438 - travel_agent - INFO - Fetching flight data | Origin: Bangalore, Destination: Kolkata, Departure: 2025-11-23, Return: 2025-11-26, Adults: 4
+2025-11-06 20:37:57,439 - travel_agent - INFO - Fetching hotel data | City: Kolkata, Check-in: 2025-11-23, Check-out: 2025-11-26, Adults: 4, Rooms: 1
+2025-11-06 20:37:57,439 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:37:57,439 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:37:57,439 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:37:57,439 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:37:57,439 - travel_agent - INFO - \u2708\ufe0f Initialized Amadeus client successfully (test environment).
+2025-11-06 20:37:57,439 - travel_agent - INFO - HotelTools initialized with Amadeus test client
+2025-11-06 20:37:57,439 - travel_agent - INFO - Fetching hotels for Kolkata | check-in: 2025-11-23, check-out: 2025-11-26, adults: 4
+2025-11-06 20:37:57,475 - travel_agent - INFO - \u2705 Successfully loaded attractions dataset from combined.csv
+2025-11-06 20:37:57,475 - travel_agent - INFO - Initializing Azure embeddings model...
+2025-11-06 20:37:57,513 - travel_agent - INFO - \u2705 Embeddings model initialized successfully
+2025-11-06 20:37:57,514 - travel_agent - INFO - \U0001f4c1 Existing vector database found, loading from disk.
+2025-11-06 20:37:57,536 - travel_agent - INFO - \U0001f50d Successfully created Chroma retriever.
+2025-11-06 20:37:57,547 - travel_agent - INFO - \u2705 Retrieved 20 hotel results for Kolkata
+2025-11-06 20:37:57,547 - travel_agent - INFO - Retrieved 20 hotels for Kolkata
+2025-11-06 20:37:58,522 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:37:58,529 - travel_agent - INFO - Retrieved attraction details for Kolkata successfully
+2025-11-06 20:37:59,159 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:38:00,018 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:38:00,018 - travel_agent - INFO - \U0001f50d Fetching flights from BAN \u2192 CCU on 2025-11-23 for 4 adult(s).
+2025-11-06 20:38:01,113 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route BAN \u2192 CCU.
+2025-11-06 20:38:01,114 - travel_agent - INFO - Retrieved 0 outbound flight options
+2025-11-06 20:38:01,114 - travel_agent - INFO - \U0001f504 Fetching return flights for Kolkata \u2192 Bangalore on 2025-11-26.
+2025-11-06 20:38:01,893 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:38:02,721 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:38:02,721 - travel_agent - INFO - \U0001f50d Fetching flights from CCU \u2192 BAN on 2025-11-26 for 4 adult(s).
+2025-11-06 20:38:03,883 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route CCU \u2192 BAN.
+2025-11-06 20:38:03,883 - travel_agent - INFO - Retrieved 0 return flight options
+2025-11-06 20:38:03,883 - travel_agent - INFO - Flight data fetched successfully
+2025-11-06 20:38:03,893 - travel_agent - INFO - Starting top attraction recommendations generation
+2025-11-06 20:38:03,893 - travel_agent - INFO - Starting top flight summary generation
+2025-11-06 20:38:03,893 - travel_agent - INFO - Starting top hotel recommendations generation
+2025-11-06 20:38:03,893 - travel_agent - INFO - Structured LLM model prepared for top attraction recommendations
+2025-11-06 20:38:03,899 - travel_agent - INFO - Structured LLM model prepared for flight recommendations
+2025-11-06 20:38:03,902 - travel_agent - INFO - Structured LLM model prepared for hotel recommendations
+2025-11-06 20:38:03,902 - travel_agent - INFO - Invoking LLM for top attractions in Kolkata
+2025-11-06 20:38:03,902 - travel_agent - INFO - Invoking LLM for flight summary | Route: Bangalore \u2192 Kolkata
+2025-11-06 20:38:03,902 - travel_agent - INFO - Invoking LLM for top hotels in Kolkata
+2025-11-06 20:38:05,218 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:38:05,218 - travel_agent - INFO - Successfully generated top flight summary
+2025-11-06 20:38:06,330 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:38:06,338 - travel_agent - INFO - Successfully generated top attraction recommendations for Kolkata
+2025-11-06 20:38:07,494 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:38:07,510 - travel_agent - INFO - Successfully generated top hotel recommendations for Kolkata
+2025-11-06 20:38:07,510 - travel_agent - INFO - Starting itinerary generation process.
+2025-11-06 20:38:07,510 - travel_agent - INFO - Prompt template for itinerary successfully created.
+2025-11-06 20:38:15,399 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:38:15,401 - travel_agent - INFO - Successfully generated itinerary from LLM response.
+2025-11-06 20:38:15,406 - travel_agent - INFO - Generating itinerary PDF...
+2025-11-06 20:38:15,444 - travel_agent - INFO - \u2705 PDF generated successfully
+2025-11-06 20:38:15,445 - travel_agent - INFO - Final itinerary displayed and PDF download enabled
+2025-11-06 20:38:15,446 - travel_agent - INFO - Result displayed successfully on Streamlit UI.
+2025-11-06 20:38:15,446 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:38:15,447 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:38:15,447 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:40:55,185 - travel_agent - INFO - Application started.
+2025-11-06 20:40:55,185 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:40:55,185 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:40:55,185 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:40:55,185 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:40:55,185 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:40:55,185 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:40:55,185 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:40:55,185 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:40:55,185 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:40:55,185 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:40:55,185 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:40:55,185 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:45:16,556 - travel_agent - INFO - Application started.
+2025-11-06 20:45:16,556 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:45:16,557 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:45:16,557 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:45:16,557 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:45:16,557 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:45:16,558 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:45:16,558 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:45:16,558 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:45:16,559 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:45:16,559 - travel_agent - INFO - User input received: Travelling from Bangalore to Kolkata for a cultural trip with my 3 friends from 23-11-2025 to 26-11-2025.
+2025-11-06 20:45:16,559 - travel_agent - INFO - Initializing AzureChatOpenAI LLM model...
+2025-11-06 20:45:16,585 - travel_agent - INFO - \u2705 AzureChatOpenAI model initialized successfully
+2025-11-06 20:45:16,585 - travel_agent - INFO - LLM model loaded successfully.
+2025-11-06 20:45:16,585 - travel_agent - INFO - GraphBuilder initialized with provided LLM model
+2025-11-06 20:45:16,586 - travel_agent - INFO - Setting up state graph for travel planner agent
+2025-11-06 20:45:16,586 - travel_agent - INFO - Building travel planner state graph...
+2025-11-06 20:45:16,586 - travel_agent - INFO - AttractionNodes initialized with LLM instance
+2025-11-06 20:45:16,586 - travel_agent - INFO - HotelNodes initialized with LLM instance
+2025-11-06 20:45:16,586 - travel_agent - INFO - FlightNodes initialized with LLM instance
+2025-11-06 20:45:16,587 - travel_agent - INFO - Initialized UserNodes with provided LLM instance.
+2025-11-06 20:45:16,587 - travel_agent - INFO - Initialized ItineraryNodes with provided LLM instance.
+2025-11-06 20:45:16,587 - travel_agent - INFO - Adding nodes to the state graph
+2025-11-06 20:45:16,588 - travel_agent - INFO - Setting entry point and transitions between nodes
+2025-11-06 20:45:16,588 - travel_agent - INFO - State graph build completed successfully \u2705
+2025-11-06 20:45:16,597 - travel_agent - INFO - Graph compiled successfully \u2705
+2025-11-06 20:45:16,597 - travel_agent - INFO - Graph setup completed successfully.
+2025-11-06 20:45:16,597 - travel_agent - INFO - DisplayResultStreamlit initialized with new user message
+2025-11-06 20:45:16,597 - travel_agent - INFO - Displaying results on Streamlit UI
+2025-11-06 20:45:16,600 - travel_agent - INFO - Starting user data extraction process.
+2025-11-06 20:45:16,601 - travel_agent - INFO - Prompting LLM for user detail extraction.
+2025-11-06 20:45:18,188 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:45:18,196 - travel_agent - INFO - Successfully received structured user details from LLM.
+2025-11-06 20:45:18,196 - travel_agent - INFO - User data successfully extracted and parsed.
+2025-11-06 20:45:18,196 - travel_agent - INFO - \u2705 USER DATA EXTRACTION COMPLETED
+2025-11-06 20:45:18,197 - travel_agent - INFO - Fetching attraction details for city: Kolkata
+2025-11-06 20:45:18,197 - travel_agent - INFO - Fetching flight data | Origin: Bangalore, Destination: Kolkata, Departure: 2025-11-23, Return: 2025-11-26, Adults: 4
+2025-11-06 20:45:18,198 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:45:18,198 - travel_agent - INFO - Fetching hotel data | City: Kolkata, Check-in: 2025-11-23, Check-out: 2025-11-26, Adults: 4, Rooms: 1
+2025-11-06 20:45:18,198 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:45:18,199 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:45:18,199 - travel_agent - INFO - \u2708\ufe0f Initialized Amadeus client successfully (test environment).
+2025-11-06 20:45:18,199 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:45:18,199 - travel_agent - INFO - HotelTools initialized with Amadeus test client
+2025-11-06 20:45:18,199 - travel_agent - INFO - Fetching hotels for Kolkata | check-in: 2025-11-23, check-out: 2025-11-26, adults: 4
+2025-11-06 20:45:18,219 - travel_agent - INFO - \u2705 Successfully loaded attractions dataset from combined.csv
+2025-11-06 20:45:18,219 - travel_agent - INFO - Initializing Azure embeddings model...
+2025-11-06 20:45:18,243 - travel_agent - INFO - \u2705 Embeddings model initialized successfully
+2025-11-06 20:45:18,243 - travel_agent - INFO - \U0001f4c1 Existing vector database found, loading from disk.
+2025-11-06 20:45:18,260 - travel_agent - INFO - \U0001f50d Successfully created Chroma retriever.
+2025-11-06 20:45:18,293 - travel_agent - INFO - \u2705 Retrieved 20 hotel results for Kolkata
+2025-11-06 20:45:18,293 - travel_agent - INFO - Retrieved 20 hotels for Kolkata
+2025-11-06 20:45:19,319 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:45:19,324 - travel_agent - INFO - Retrieved attraction details for Kolkata successfully
+2025-11-06 20:45:19,624 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:45:20,328 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:45:20,329 - travel_agent - INFO - \U0001f50d Fetching flights from BAN \u2192 CCU on 2025-11-23 for 4 adult(s).
+2025-11-06 20:45:21,307 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route BAN \u2192 CCU.
+2025-11-06 20:45:21,307 - travel_agent - INFO - Retrieved 0 outbound flight options
+2025-11-06 20:45:21,308 - travel_agent - INFO - \U0001f504 Fetching return flights for Kolkata \u2192 Bangalore on 2025-11-26.
+2025-11-06 20:45:22,103 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:45:22,909 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:45:22,910 - travel_agent - INFO - \U0001f50d Fetching flights from CCU \u2192 BAN on 2025-11-26 for 4 adult(s).
+2025-11-06 20:45:24,117 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route CCU \u2192 BAN.
+2025-11-06 20:45:24,118 - travel_agent - INFO - Retrieved 0 return flight options
+2025-11-06 20:45:24,118 - travel_agent - INFO - Flight data fetched successfully
+2025-11-06 20:45:24,119 - travel_agent - INFO - Starting top attraction recommendations generation
+2025-11-06 20:45:24,119 - travel_agent - INFO - Starting top flight summary generation
+2025-11-06 20:45:24,119 - travel_agent - INFO - Starting top hotel recommendations generation
+2025-11-06 20:45:24,121 - travel_agent - INFO - Structured LLM model prepared for top attraction recommendations
+2025-11-06 20:45:24,123 - travel_agent - INFO - Structured LLM model prepared for flight recommendations
+2025-11-06 20:45:24,124 - travel_agent - INFO - Structured LLM model prepared for hotel recommendations
+2025-11-06 20:45:24,124 - travel_agent - INFO - Invoking LLM for top attractions in Kolkata
+2025-11-06 20:45:24,124 - travel_agent - INFO - Invoking LLM for flight summary | Route: Bangalore \u2192 Kolkata
+2025-11-06 20:45:24,125 - travel_agent - INFO - Invoking LLM for top hotels in Kolkata
+2025-11-06 20:45:25,416 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:45:25,425 - travel_agent - INFO - Successfully generated top flight summary
+2025-11-06 20:45:26,458 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:45:26,463 - travel_agent - INFO - Successfully generated top attraction recommendations for Kolkata
+2025-11-06 20:45:27,636 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:45:27,641 - travel_agent - INFO - Successfully generated top hotel recommendations for Kolkata
+2025-11-06 20:45:27,642 - travel_agent - INFO - Starting itinerary generation process.
+2025-11-06 20:45:27,642 - travel_agent - INFO - Prompt template for itinerary successfully created.
+2025-11-06 20:45:35,747 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:45:35,748 - travel_agent - INFO - Successfully generated itinerary from LLM response.
+2025-11-06 20:45:35,751 - travel_agent - INFO - Generating itinerary PDF...
+2025-11-06 20:45:35,769 - travel_agent - INFO - \u2705 PDF generated successfully
+2025-11-06 20:45:35,770 - travel_agent - INFO - Final itinerary displayed and PDF download enabled
+2025-11-06 20:45:35,770 - travel_agent - INFO - Result displayed successfully on Streamlit UI.
+2025-11-06 20:45:35,771 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:45:35,771 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:45:35,771 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:49:24,525 - travel_agent - INFO - Application started.
+2025-11-06 20:49:24,525 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:49:24,525 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:49:24,525 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:49:24,525 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:49:24,525 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:49:24,525 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:49:24,525 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:49:24,525 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:49:24,525 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:49:24,525 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:49:24,525 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:49:24,525 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:49:34,048 - travel_agent - INFO - Application started.
+2025-11-06 20:49:34,049 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:49:34,050 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:49:34,050 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:49:34,050 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:49:34,050 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:49:34,050 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:49:34,052 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:49:34,052 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:49:34,052 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:49:34,054 - travel_agent - INFO - User input received: Travelling from Bangalore to Kolkata for a cultural trip with my 3 friends from 23-11-2025 to 26-11-2025.
+2025-11-06 20:49:34,054 - travel_agent - INFO - Initializing AzureChatOpenAI LLM model...
+2025-11-06 20:49:34,090 - travel_agent - INFO - \u2705 AzureChatOpenAI model initialized successfully
+2025-11-06 20:49:34,091 - travel_agent - INFO - LLM model loaded successfully.
+2025-11-06 20:49:34,091 - travel_agent - INFO - GraphBuilder initialized with provided LLM model
+2025-11-06 20:49:34,091 - travel_agent - INFO - Setting up state graph for travel planner agent
+2025-11-06 20:49:34,091 - travel_agent - INFO - Building travel planner state graph...
+2025-11-06 20:49:34,092 - travel_agent - INFO - AttractionNodes initialized with LLM instance
+2025-11-06 20:49:34,092 - travel_agent - INFO - HotelNodes initialized with LLM instance
+2025-11-06 20:49:34,092 - travel_agent - INFO - FlightNodes initialized with LLM instance
+2025-11-06 20:49:34,092 - travel_agent - INFO - Initialized UserNodes with provided LLM instance.
+2025-11-06 20:49:34,092 - travel_agent - INFO - Initialized ItineraryNodes with provided LLM instance.
+2025-11-06 20:49:34,093 - travel_agent - INFO - Adding nodes to the state graph
+2025-11-06 20:49:34,093 - travel_agent - INFO - Setting entry point and transitions between nodes
+2025-11-06 20:49:34,093 - travel_agent - INFO - State graph build completed successfully \u2705
+2025-11-06 20:49:34,105 - travel_agent - INFO - Graph compiled successfully \u2705
+2025-11-06 20:49:34,106 - travel_agent - INFO - Graph setup completed successfully.
+2025-11-06 20:49:34,106 - travel_agent - INFO - DisplayResultStreamlit initialized with new user message
+2025-11-06 20:49:34,106 - travel_agent - INFO - Displaying results on Streamlit UI
+2025-11-06 20:49:34,109 - travel_agent - INFO - Starting user data extraction process.
+2025-11-06 20:49:34,111 - travel_agent - INFO - Prompting LLM for user detail extraction.
+2025-11-06 20:49:35,711 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:49:35,725 - travel_agent - INFO - Successfully received structured user details from LLM.
+2025-11-06 20:49:35,726 - travel_agent - INFO - User data successfully extracted and parsed.
+2025-11-06 20:49:35,726 - travel_agent - INFO - \u2705 USER DATA EXTRACTION COMPLETED
+2025-11-06 20:49:35,728 - travel_agent - INFO - Fetching attraction details for city: Kolkata
+2025-11-06 20:49:35,729 - travel_agent - INFO - Fetching flight data | Origin: Bangalore, Destination: Kolkata, Departure: 2025-11-23, Return: 2025-11-26, Adults: 4
+2025-11-06 20:49:35,730 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:49:35,731 - travel_agent - INFO - Fetching hotel data | City: Kolkata, Check-in: 2025-11-23, Check-out: 2025-11-26, Adults: 4, Rooms: 1
+2025-11-06 20:49:35,731 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:49:35,732 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:49:35,732 - travel_agent - INFO - \u2708\ufe0f Initialized Amadeus client successfully (test environment).
+2025-11-06 20:49:35,732 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:49:35,733 - travel_agent - INFO - HotelTools initialized with Amadeus test client
+2025-11-06 20:49:35,733 - travel_agent - INFO - Fetching hotels for Kolkata | check-in: 2025-11-23, check-out: 2025-11-26, adults: 4
+2025-11-06 20:49:35,762 - travel_agent - INFO - \u2705 Successfully loaded attractions dataset from combined.csv
+2025-11-06 20:49:35,762 - travel_agent - INFO - Initializing Azure embeddings model...
+2025-11-06 20:49:35,804 - travel_agent - INFO - \u2705 Embeddings model initialized successfully
+2025-11-06 20:49:35,805 - travel_agent - INFO - \U0001f4c1 Existing vector database found, loading from disk.
+2025-11-06 20:49:35,823 - travel_agent - INFO - \U0001f50d Successfully created Chroma retriever.
+2025-11-06 20:49:35,830 - travel_agent - INFO - \u2705 Retrieved 20 hotel results for Kolkata
+2025-11-06 20:49:35,830 - travel_agent - INFO - Retrieved 20 hotels for Kolkata
+2025-11-06 20:49:36,860 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:49:36,868 - travel_agent - INFO - Retrieved attraction details for Kolkata successfully
+2025-11-06 20:49:37,772 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:49:38,688 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:49:38,688 - travel_agent - INFO - \U0001f50d Fetching flights from BAN \u2192 CCU on 2025-11-23 for 4 adult(s).
+2025-11-06 20:49:39,647 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route BAN \u2192 CCU.
+2025-11-06 20:49:39,647 - travel_agent - INFO - Retrieved 0 outbound flight options
+2025-11-06 20:49:39,647 - travel_agent - INFO - \U0001f504 Fetching return flights for Kolkata \u2192 Bangalore on 2025-11-26.
+2025-11-06 20:49:40,427 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:49:41,088 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:49:41,088 - travel_agent - INFO - \U0001f50d Fetching flights from CCU \u2192 BAN on 2025-11-26 for 4 adult(s).
+2025-11-06 20:49:42,093 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route CCU \u2192 BAN.
+2025-11-06 20:49:42,093 - travel_agent - INFO - Retrieved 0 return flight options
+2025-11-06 20:49:42,093 - travel_agent - INFO - Flight data fetched successfully
+2025-11-06 20:49:42,095 - travel_agent - INFO - Starting top attraction recommendations generation
+2025-11-06 20:49:42,095 - travel_agent - INFO - Starting top flight summary generation
+2025-11-06 20:49:42,095 - travel_agent - INFO - Starting top hotel recommendations generation
+2025-11-06 20:49:42,096 - travel_agent - INFO - Structured LLM model prepared for top attraction recommendations
+2025-11-06 20:49:42,098 - travel_agent - INFO - Structured LLM model prepared for flight recommendations
+2025-11-06 20:49:42,099 - travel_agent - INFO - Structured LLM model prepared for hotel recommendations
+2025-11-06 20:49:42,099 - travel_agent - INFO - Invoking LLM for top attractions in Kolkata
+2025-11-06 20:49:42,099 - travel_agent - INFO - Invoking LLM for flight summary | Route: Bangalore \u2192 Kolkata
+2025-11-06 20:49:42,100 - travel_agent - INFO - Invoking LLM for top hotels in Kolkata
+2025-11-06 20:49:43,371 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:49:43,392 - travel_agent - INFO - Successfully generated top flight summary
+2025-11-06 20:49:44,523 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:49:44,532 - travel_agent - INFO - Successfully generated top attraction recommendations for Kolkata
+2025-11-06 20:49:45,576 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:49:45,596 - travel_agent - INFO - Successfully generated top hotel recommendations for Kolkata
+2025-11-06 20:49:45,596 - travel_agent - INFO - Starting itinerary generation process.
+2025-11-06 20:49:45,596 - travel_agent - INFO - Prompt template for itinerary successfully created.
+2025-11-06 20:49:53,843 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:49:53,843 - travel_agent - INFO - Successfully generated itinerary from LLM response.
+2025-11-06 20:49:53,851 - travel_agent - INFO - Generating itinerary PDF...
+2025-11-06 20:49:53,871 - travel_agent - INFO - \u2705 PDF generated successfully
+2025-11-06 20:49:53,871 - travel_agent - INFO - Final itinerary displayed and PDF download enabled
+2025-11-06 20:49:53,872 - travel_agent - INFO - Result displayed successfully on Streamlit UI.
+2025-11-06 20:49:53,872 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:49:53,872 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:49:53,873 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:50:19,330 - travel_agent - INFO - Application started.
+2025-11-06 20:50:19,330 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:50:19,331 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:50:19,331 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:50:19,331 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:50:19,331 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:50:19,332 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:50:19,332 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:50:19,333 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:50:19,333 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:50:19,335 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:50:19,335 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:50:19,335 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:53:37,016 - travel_agent - INFO - Application started.
+2025-11-06 20:53:53,730 - travel_agent - INFO - Application started.
+2025-11-06 20:54:04,109 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:54:04,109 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:54:04,125 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:54:04,125 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:54:04,125 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:54:04,125 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:54:04,125 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:54:04,126 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:54:04,126 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:54:04,126 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:54:04,127 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:54:04,127 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:54:08,936 - travel_agent - INFO - Application started.
+2025-11-06 20:54:08,936 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:54:08,937 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:54:08,937 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:54:08,937 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:54:08,937 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:54:08,938 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:54:09,153 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:54:09,153 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:54:09,153 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:54:09,154 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:54:09,154 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:54:09,154 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:54:14,237 - travel_agent - INFO - Application started.
+2025-11-06 20:54:14,237 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:54:14,239 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:54:14,239 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:54:14,239 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:54:14,240 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:54:14,240 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:54:14,241 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:54:14,241 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:54:14,242 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:54:14,243 - travel_agent - INFO - User input received: Travelling from Bangalore to Kolkata for a cultural trip with my 3 friends from 23-11-2025 to 26-11-2025.
+2025-11-06 20:54:14,243 - travel_agent - INFO - Initializing AzureChatOpenAI LLM model...
+2025-11-06 20:54:14,599 - travel_agent - INFO - \u2705 AzureChatOpenAI model initialized successfully
+2025-11-06 20:54:14,599 - travel_agent - INFO - LLM model loaded successfully.
+2025-11-06 20:54:14,600 - travel_agent - INFO - GraphBuilder initialized with provided LLM model
+2025-11-06 20:54:14,600 - travel_agent - INFO - Setting up state graph for travel planner agent
+2025-11-06 20:54:14,600 - travel_agent - INFO - Building travel planner state graph...
+2025-11-06 20:54:14,600 - travel_agent - INFO - AttractionNodes initialized with LLM instance
+2025-11-06 20:54:14,600 - travel_agent - INFO - HotelNodes initialized with LLM instance
+2025-11-06 20:54:14,601 - travel_agent - INFO - FlightNodes initialized with LLM instance
+2025-11-06 20:54:14,601 - travel_agent - INFO - Initialized UserNodes with provided LLM instance.
+2025-11-06 20:54:14,601 - travel_agent - INFO - Initialized ItineraryNodes with provided LLM instance.
+2025-11-06 20:54:14,601 - travel_agent - INFO - Adding nodes to the state graph
+2025-11-06 20:54:14,603 - travel_agent - INFO - Setting entry point and transitions between nodes
+2025-11-06 20:54:14,603 - travel_agent - INFO - State graph build completed successfully \u2705
+2025-11-06 20:54:14,617 - travel_agent - INFO - Graph compiled successfully \u2705
+2025-11-06 20:54:14,617 - travel_agent - INFO - Graph setup completed successfully.
+2025-11-06 20:54:14,617 - travel_agent - INFO - DisplayResultStreamlit initialized with new user message
+2025-11-06 20:54:14,618 - travel_agent - INFO - Displaying results on Streamlit UI
+2025-11-06 20:54:14,621 - travel_agent - INFO - Starting user data extraction process.
+2025-11-06 20:54:14,624 - travel_agent - INFO - Prompting LLM for user detail extraction.
+2025-11-06 20:54:16,902 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:54:16,922 - travel_agent - INFO - Successfully received structured user details from LLM.
+2025-11-06 20:54:16,922 - travel_agent - INFO - User data successfully extracted and parsed.
+2025-11-06 20:54:16,922 - travel_agent - INFO - \u2705 USER DATA EXTRACTION COMPLETED
+2025-11-06 20:54:16,924 - travel_agent - INFO - Fetching attraction details for city: Kolkata
+2025-11-06 20:54:16,926 - travel_agent - INFO - Fetching flight data | Origin: Bangalore, Destination: Kolkata, Departure: 2025-11-23, Return: 2025-11-26, Adults: 4
+2025-11-06 20:54:16,926 - travel_agent - INFO - Fetching hotel data | City: Kolkata, Check-in: 2025-11-23, Check-out: 2025-11-26, Adults: 4, Rooms: 1
+2025-11-06 20:54:16,927 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:54:16,928 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:54:16,928 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:54:16,928 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:54:16,929 - travel_agent - INFO - \u2708\ufe0f Initialized Amadeus client successfully (test environment).
+2025-11-06 20:54:16,929 - travel_agent - INFO - HotelTools initialized with Amadeus test client
+2025-11-06 20:54:16,930 - travel_agent - INFO - Fetching hotels for Kolkata | check-in: 2025-11-23, check-out: 2025-11-26, adults: 4
+2025-11-06 20:54:16,963 - travel_agent - INFO - \u2705 Successfully loaded attractions dataset from combined.csv
+2025-11-06 20:54:16,963 - travel_agent - INFO - Initializing Azure embeddings model...
+2025-11-06 20:54:17,000 - travel_agent - INFO - \u2705 Embeddings model initialized successfully
+2025-11-06 20:54:17,000 - travel_agent - INFO - \U0001f4c1 Existing vector database found, loading from disk.
+2025-11-06 20:54:17,023 - chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-06 20:54:17,093 - travel_agent - INFO - \u2705 Retrieved 20 hotel results for Kolkata
+2025-11-06 20:54:17,093 - travel_agent - INFO - Retrieved 20 hotels for Kolkata
+2025-11-06 20:54:17,102 - travel_agent - INFO - \U0001f50d Successfully created Chroma retriever.
+2025-11-06 20:54:18,166 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:54:18,229 - travel_agent - INFO - Retrieved attraction details for Kolkata successfully
+2025-11-06 20:54:18,543 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:54:19,243 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:54:19,243 - travel_agent - INFO - \U0001f50d Fetching flights from BAN \u2192 CCU on 2025-11-23 for 4 adult(s).
+2025-11-06 20:54:20,348 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route BAN \u2192 CCU.
+2025-11-06 20:54:20,348 - travel_agent - INFO - Retrieved 0 outbound flight options
+2025-11-06 20:54:20,348 - travel_agent - INFO - \U0001f504 Fetching return flights for Kolkata \u2192 Bangalore on 2025-11-26.
+2025-11-06 20:54:21,180 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:54:21,853 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:54:21,853 - travel_agent - INFO - \U0001f50d Fetching flights from CCU \u2192 BAN on 2025-11-26 for 4 adult(s).
+2025-11-06 20:54:23,009 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route CCU \u2192 BAN.
+2025-11-06 20:54:23,009 - travel_agent - INFO - Retrieved 0 return flight options
+2025-11-06 20:54:23,009 - travel_agent - INFO - Flight data fetched successfully
+2025-11-06 20:54:23,009 - travel_agent - INFO - Starting top attraction recommendations generation
+2025-11-06 20:54:23,009 - travel_agent - INFO - Starting top flight summary generation
+2025-11-06 20:54:23,009 - travel_agent - INFO - Starting top hotel recommendations generation
+2025-11-06 20:54:23,009 - travel_agent - INFO - Structured LLM model prepared for top attraction recommendations
+2025-11-06 20:54:23,023 - travel_agent - INFO - Structured LLM model prepared for hotel recommendations
+2025-11-06 20:54:23,023 - travel_agent - INFO - Structured LLM model prepared for flight recommendations
+2025-11-06 20:54:23,024 - travel_agent - INFO - Invoking LLM for top attractions in Kolkata
+2025-11-06 20:54:23,024 - travel_agent - INFO - Invoking LLM for top hotels in Kolkata
+2025-11-06 20:54:23,024 - travel_agent - INFO - Invoking LLM for flight summary | Route: Bangalore \u2192 Kolkata
+2025-11-06 20:54:24,345 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:54:24,345 - travel_agent - INFO - Successfully generated top flight summary
+2025-11-06 20:54:25,243 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:54:25,249 - travel_agent - INFO - Successfully generated top attraction recommendations for Kolkata
+2025-11-06 20:54:26,566 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:54:26,574 - travel_agent - INFO - Successfully generated top hotel recommendations for Kolkata
+2025-11-06 20:54:26,574 - travel_agent - INFO - Starting itinerary generation process.
+2025-11-06 20:54:26,574 - travel_agent - INFO - Prompt template for itinerary successfully created.
+2025-11-06 20:54:26,809 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 400 Bad Request"
+2025-11-06 20:54:26,809 - travel_agent - ERROR - Error while generating itinerary: Error code: 400 - {'error': {'message': "Setting 'max_tokens' and 'max_completion_tokens' at the same time is not supported.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'invalid_parameter_combination'}}
+Traceback (most recent call last):
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\src\nodes\itineary_nodes.py", line 60, in generate_itinerary
+    response = self.llm.invoke(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 379, in invoke
+    self.generate_prompt(
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1088, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 903, in generate
+    self._generate_with_cache(
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1192, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1299, in _generate
+    raise e
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1294, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\openai\_legacy_response.py", line 364, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1156, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\openai\_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\openai\_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Setting 'max_tokens' and 'max_completion_tokens' at the same time is not supported.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'invalid_parameter_combination'}}
+2025-11-06 20:54:26,809 - travel_agent - ERROR - \u274c Error during UI streaming or rendering: Error code: 400 - {'error': {'message': "Setting 'max_tokens' and 'max_completion_tokens' at the same time is not supported.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'invalid_parameter_combination'}}
+Traceback (most recent call last):
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\src\ui\streamlitui\displayresult.py", line 82, in render_result_on_ui
+    for event in graph.stream({"user_data": user_message}):
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2679, in stream
+    for _ in runner.tick(
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 167, in tick
+    run_with_retry(
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\src\nodes\itineary_nodes.py", line 60, in generate_itinerary
+    response = self.llm.invoke(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 379, in invoke
+    self.generate_prompt(
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1088, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 903, in generate
+    self._generate_with_cache(
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1192, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1299, in _generate
+    raise e
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1294, in _generate
+    raw_response = self.client.with_raw_response.create(**payload)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\openai\_legacy_response.py", line 364, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\openai\_utils\_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 1156, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\openai\_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\PikaPool\Documents\Looking For Jobs\Udemy\Travel Planner Agent Updated\.venv\Lib\site-packages\openai\_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Setting 'max_tokens' and 'max_completion_tokens' at the same time is not supported.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'invalid_parameter_combination'}}
+During task with name 'generate_itinerary' and id 'd824202a-e27c-2eb1-6f61-23f812bbf5d6'
+2025-11-06 20:54:26,827 - travel_agent - INFO - Result displayed successfully on Streamlit UI.
+2025-11-06 20:54:26,827 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:54:26,827 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:54:26,828 - travel_agent - INFO - Application shutdown.
+2025-11-06 20:55:29,004 - travel_agent - INFO - Application started.
+2025-11-06 20:55:29,004 - travel_agent - INFO - Starting travel planner agent...
+2025-11-06 20:55:29,004 - travel_agent - INFO - Config initialized with file: .\src\ui\uiconfig.ini
+2025-11-06 20:55:29,005 - travel_agent - INFO - Initialized LoadStreamlitUI class.
+2025-11-06 20:55:29,005 - travel_agent - INFO - Loading Streamlit UI started.
+2025-11-06 20:55:29,005 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:55:29,006 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:55:29,006 - travel_agent - INFO - Fetched PAGE_TITLE: Travel Planner Agent
+2025-11-06 20:55:29,007 - travel_agent - INFO - Streamlit UI loaded successfully with title: Travel Planner Agent
+2025-11-06 20:55:29,007 - travel_agent - INFO - Streamlit UI loaded successfully.
+2025-11-06 20:55:29,008 - travel_agent - INFO - User input received: Travelling from Bangalore to Kolkata for a cultural trip with my 3 friends from 23-11-2025 to 26-11-2025.
+2025-11-06 20:55:29,008 - travel_agent - INFO - Initializing AzureChatOpenAI LLM model...
+2025-11-06 20:55:29,036 - travel_agent - INFO - \u2705 AzureChatOpenAI model initialized successfully
+2025-11-06 20:55:29,037 - travel_agent - INFO - LLM model loaded successfully.
+2025-11-06 20:55:29,037 - travel_agent - INFO - GraphBuilder initialized with provided LLM model
+2025-11-06 20:55:29,037 - travel_agent - INFO - Setting up state graph for travel planner agent
+2025-11-06 20:55:29,038 - travel_agent - INFO - Building travel planner state graph...
+2025-11-06 20:55:29,038 - travel_agent - INFO - AttractionNodes initialized with LLM instance
+2025-11-06 20:55:29,038 - travel_agent - INFO - HotelNodes initialized with LLM instance
+2025-11-06 20:55:29,038 - travel_agent - INFO - FlightNodes initialized with LLM instance
+2025-11-06 20:55:29,039 - travel_agent - INFO - Initialized UserNodes with provided LLM instance.
+2025-11-06 20:55:29,039 - travel_agent - INFO - Initialized ItineraryNodes with provided LLM instance.
+2025-11-06 20:55:29,041 - travel_agent - INFO - Adding nodes to the state graph
+2025-11-06 20:55:29,042 - travel_agent - INFO - Setting entry point and transitions between nodes
+2025-11-06 20:55:29,043 - travel_agent - INFO - State graph build completed successfully \u2705
+2025-11-06 20:55:29,054 - travel_agent - INFO - Graph compiled successfully \u2705
+2025-11-06 20:55:29,054 - travel_agent - INFO - Graph setup completed successfully.
+2025-11-06 20:55:29,055 - travel_agent - INFO - DisplayResultStreamlit initialized with new user message
+2025-11-06 20:55:29,055 - travel_agent - INFO - Displaying results on Streamlit UI
+2025-11-06 20:55:29,057 - travel_agent - INFO - Starting user data extraction process.
+2025-11-06 20:55:29,059 - travel_agent - INFO - Prompting LLM for user detail extraction.
+2025-11-06 20:55:30,809 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:55:30,811 - travel_agent - INFO - Successfully received structured user details from LLM.
+2025-11-06 20:55:30,811 - travel_agent - INFO - User data successfully extracted and parsed.
+2025-11-06 20:55:30,811 - travel_agent - INFO - \u2705 USER DATA EXTRACTION COMPLETED
+2025-11-06 20:55:30,811 - travel_agent - INFO - Fetching attraction details for city: Kolkata
+2025-11-06 20:55:30,811 - travel_agent - INFO - Fetching flight data | Origin: Bangalore, Destination: Kolkata, Departure: 2025-11-23, Return: 2025-11-26, Adults: 4
+2025-11-06 20:55:30,811 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:55:30,811 - travel_agent - INFO - Fetching hotel data | City: Kolkata, Check-in: 2025-11-23, Check-out: 2025-11-26, Adults: 4, Rooms: 1
+2025-11-06 20:55:30,811 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:55:30,817 - travel_agent - INFO - Initializing Amadeus client with hostname: test
+2025-11-06 20:55:30,817 - travel_agent - INFO - \u2708\ufe0f Initialized Amadeus client successfully (test environment).
+2025-11-06 20:55:30,818 - travel_agent - INFO - \u2705 Amadeus client initialized successfully
+2025-11-06 20:55:30,818 - travel_agent - INFO - HotelTools initialized with Amadeus test client
+2025-11-06 20:55:30,818 - travel_agent - INFO - Fetching hotels for Kolkata | check-in: 2025-11-23, check-out: 2025-11-26, adults: 4
+2025-11-06 20:55:30,836 - travel_agent - INFO - \u2705 Successfully loaded attractions dataset from combined.csv
+2025-11-06 20:55:30,836 - travel_agent - INFO - Initializing Azure embeddings model...
+2025-11-06 20:55:30,859 - travel_agent - INFO - \u2705 Embeddings model initialized successfully
+2025-11-06 20:55:30,859 - travel_agent - INFO - \U0001f4c1 Existing vector database found, loading from disk.
+2025-11-06 20:55:30,874 - travel_agent - INFO - \U0001f50d Successfully created Chroma retriever.
+2025-11-06 20:55:30,881 - travel_agent - INFO - \u2705 Retrieved 20 hotel results for Kolkata
+2025-11-06 20:55:30,881 - travel_agent - INFO - Retrieved 20 hotels for Kolkata
+2025-11-06 20:55:31,805 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/text-embedding-3-large/embeddings?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:55:31,805 - travel_agent - INFO - Retrieved attraction details for Kolkata successfully
+2025-11-06 20:55:32,373 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:55:33,243 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:55:33,243 - travel_agent - INFO - \U0001f50d Fetching flights from BAN \u2192 CCU on 2025-11-23 for 4 adult(s).
+2025-11-06 20:55:34,172 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route BAN \u2192 CCU.
+2025-11-06 20:55:34,172 - travel_agent - INFO - Retrieved 0 outbound flight options
+2025-11-06 20:55:34,172 - travel_agent - INFO - \U0001f504 Fetching return flights for Kolkata \u2192 Bangalore on 2025-11-26.
+2025-11-06 20:55:35,036 - travel_agent - INFO - \U0001f6eb Found airport code for Kolkata: CCU
+2025-11-06 20:55:35,804 - travel_agent - WARNING - \u26a0\ufe0f No airport code found for 'Bangalore', using city name fallback.
+2025-11-06 20:55:35,804 - travel_agent - INFO - \U0001f50d Fetching flights from CCU \u2192 BAN on 2025-11-26 for 4 adult(s).
+2025-11-06 20:55:36,913 - travel_agent - WARNING - \u26a0\ufe0f No flight offers found for route CCU \u2192 BAN.
+2025-11-06 20:55:36,913 - travel_agent - INFO - Retrieved 0 return flight options
+2025-11-06 20:55:36,913 - travel_agent - INFO - Flight data fetched successfully
+2025-11-06 20:55:36,913 - travel_agent - INFO - Starting top attraction recommendations generation
+2025-11-06 20:55:36,924 - travel_agent - INFO - Starting top flight summary generation
+2025-11-06 20:55:36,924 - travel_agent - INFO - Starting top hotel recommendations generation
+2025-11-06 20:55:36,926 - travel_agent - INFO - Structured LLM model prepared for top attraction recommendations
+2025-11-06 20:55:36,926 - travel_agent - INFO - Structured LLM model prepared for flight recommendations
+2025-11-06 20:55:36,930 - travel_agent - INFO - Structured LLM model prepared for hotel recommendations
+2025-11-06 20:55:36,931 - travel_agent - INFO - Invoking LLM for top attractions in Kolkata
+2025-11-06 20:55:36,931 - travel_agent - INFO - Invoking LLM for flight summary | Route: Bangalore \u2192 Kolkata
+2025-11-06 20:55:36,931 - travel_agent - INFO - Invoking LLM for top hotels in Kolkata
+2025-11-06 20:55:38,260 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:55:38,274 - travel_agent - INFO - Successfully generated top flight summary
+2025-11-06 20:55:39,256 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:55:39,268 - travel_agent - INFO - Successfully generated top attraction recommendations for Kolkata
+2025-11-06 20:55:40,526 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:55:40,530 - travel_agent - INFO - Successfully generated top hotel recommendations for Kolkata
+2025-11-06 20:55:40,530 - travel_agent - INFO - Starting itinerary generation process.
+2025-11-06 20:55:40,530 - travel_agent - INFO - Prompt template for itinerary successfully created.
+2025-11-06 20:55:49,093 - httpx - INFO - HTTP Request: POST https://instance-agentic-ai-training-ak.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview "HTTP/1.1 200 OK"
+2025-11-06 20:55:49,093 - travel_agent - INFO - Successfully generated itinerary from LLM response.
+2025-11-06 20:55:49,093 - travel_agent - INFO - Generating itinerary PDF...
+2025-11-06 20:55:49,129 - travel_agent - INFO - \u2705 PDF generated successfully
+2025-11-06 20:55:49,130 - travel_agent - INFO - Final itinerary displayed and PDF download enabled
+2025-11-06 20:55:49,131 - travel_agent - INFO - Result displayed successfully on Streamlit UI.
+2025-11-06 20:55:49,131 - travel_agent - INFO - Travel planner agent execution completed.
+2025-11-06 20:55:49,131 - travel_agent - INFO - Application executed successfully.
+2025-11-06 20:55:49,131 - travel_agent - INFO - Application shutdown.
